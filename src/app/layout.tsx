@@ -17,7 +17,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en-US">
       <body className={`${commissioner.className} bg-gray-900`}>
         <main className="grid min-h-screen items-center py-20 bg-gray-900">
           <div className="sm:w-[500px] mx-auto rounded-md bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 p-1  md:w-[700px]">

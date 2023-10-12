@@ -1,19 +1,48 @@
 ---
-title: 04 Lorem Ipsum
-description: 04 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-date: 2024-12-24
+title: Oracle
+description: Oracle Corporation, often referred to simply as Oracle, is a multinational technology company known for its database management systems, cloud computing services, and enterprise software solutions.
+date: 2022-11-22
 ---
 
-Ullamco et nostrud magna commodo nostrud occaecat quis pariatur id ipsum. Ipsum
-consequat enim id excepteur consequat nostrud esse esse fugiat dolore.
-Reprehenderit occaecat exercitation non cupidatat in eiusmod laborum ex eu
-fugiat aute culpa pariatur. Irure elit proident consequat veniam minim ipsum ex
-pariatur.
+Oracle Corporation, often referred to simply as Oracle, is a multinational technology company known for its database management systems, cloud computing services, and enterprise software solutions. Here's a brief description of Oracle:
 
-## Esto es un h2
+**Database Management Systems:** Oracle is best known for its Oracle Database, a widely used and highly regarded relational database management system (RDBMS). Oracle Database is known for its scalability, reliability, and robust features, making it a popular choice for large enterprises and organizations.
 
-Mollit nisi cillum exercitation minim officia velit laborum non Lorem
-adipisicing dolore. Labore commodo consectetur commodo velit adipisicing irure
-dolore dolor reprehenderit aliquip. Reprehenderit cillum mollit eiusmod
-excepteur elit ipsum aute pariatur in. Cupidatat ex culpa velit culpa ad non
-labore exercitation irure laborum.
+**Enterprise Software:** Oracle provides a wide range of enterprise software solutions, including customer relationship management (CRM), enterprise resource planning (ERP), and human capital management (HCM) software. These applications help organizations manage their business processes and data effectively.
+
+**Cloud Computing Services:** Oracle offers cloud services and infrastructure through its Oracle Cloud platform. These services include cloud databases, cloud applications, cloud infrastructure, and more. Oracle Cloud competes with other major cloud providers like Amazon Web Services (AWS), Microsoft Azure, and Google Cloud.
+
+**Java:** Oracle acquired Sun Microsystems, the creator of the Java programming language, and has since been the steward of Java technology. Oracle continues to develop and support the Java platform, which is widely used in enterprise and web applications.
+
+**Hardware:** Oracle also manufactures hardware products, such as servers, storage systems, and engineered systems like the Oracle Exadata Database Machine, designed for high-performance database operations.
+
+**Consulting and Support:** Oracle provides consulting services and technical support for its products, helping businesses implement and maintain Oracle solutions.
+
+**Global Presence:** Oracle is a global company with a presence in many countries, serving a wide range of industries and customers, including large corporations, government agencies, and small to medium-sized businesses.
+
+**Innovation:** Oracle has a history of investing in research and development to innovate in areas like database technology, cloud computing, and emerging technologies like artificial intelligence and blockchain.
+
+## Example of code
+
+```sql
+sqlplus / as sysdba
+SELECT * FROM v$version;
+```
+
+
+```sql
+-- Create a new table called "employees"
+CREATE TABLE employees (
+    employee_id NUMBER(5) PRIMARY KEY,
+    first_name VARCHAR2(50),
+    last_name VARCHAR2(50),
+    hire_date DATE
+);
+
+-- Insert data into the "employees" table
+INSERT INTO employees (employee_id, first_name, last_name, hire_date)
+VALUES (101, 'John', 'Doe', TO_DATE('2023-01-15', 'YYYY-MM-DD'));
+
+INSERT INTO employees (employee_id, first_name, last_name, hire_date)
+VALUES (102, 'Jane', 'Smith', TO_DATE('2022-11-10', 'YYYY-MM-DD'));
+```

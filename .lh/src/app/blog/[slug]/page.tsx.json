@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 10,
+            "activePatchIndex": 11,
             "patches": [
                 {
                     "date": 1697068161470,
@@ -48,6 +48,10 @@
                 {
                     "date": 1697068802622,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,9 +39,9 @@\n     <div>\r\n       <h1 className=\"text-center my-4 text-3xl\">{post.title}</h1>\r\n       <div className=\"mb-8 text-center\">\r\n       <time className=\"text-gray-700\">\r\n-        {new Date(post.date).toLocaleDateString(\"en-E\", {\r\n+        {new Date(post.date).toLocaleDateString(\"en-ES\", {\r\n           year: \"numeric\",\r\n           month: \"long\",\r\n           day: \"numeric\",\r\n         })}\r\n"
+                },
+                {
+                    "date": 1697123652757,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,18 +39,18 @@\n     <div>\r\n       <h1 className=\"text-center my-4 text-3xl\">{post.title}</h1>\r\n       <div className=\"mb-8 text-center\">\r\n       <time className=\"text-gray-700\">\r\n-        {new Date(post.date).toLocaleDateString(\"en-ES\", {\r\n+        {new Date(post.date).toLocaleDateString(\"en-US\", {\r\n           year: \"numeric\",\r\n           month: \"long\",\r\n           day: \"numeric\",\r\n         })}\r\n       </time>\r\n       </div>\r\n       <MDXContent />\r\n       <div className=\"text-center\">\r\n-        <ButtonBack>Volver</ButtonBack>\r\n+        <ButtonBack>Back</ButtonBack>\r\n       </div>\r\n     </div>\r\n   );\r\n };\r\n"
                 }
             ],
             "date": 1697068161470,

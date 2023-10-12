@@ -49,7 +49,7 @@ const PostLayout = ({ params }: Props) => {
       </div>
       <MDXContent />
       <div className="text-center">
-        <ButtonBack>Volver</ButtonBack>
+        <ButtonBack>Back</ButtonBack>
       </div>
     </div>
   );

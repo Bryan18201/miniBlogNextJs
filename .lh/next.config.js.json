@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 1,
+            "activePatchIndex": 3,
             "patches": [
                 {
                     "date": 1696948259495,
@@ -12,6 +12,14 @@
                 {
                     "date": 1696948270404,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n+const { withContentlayer } = require(\"next-contentlayer\");\n \n-\n /** @type {import('next').NextConfig} */\n const nextConfig = {}\n \n-module.exports = nextConfig\n+module.exports = withContentlayer(nextConfig);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1697124288770,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,10 @@\n const { withContentlayer } = require(\"next-contentlayer\");\n \n /** @type {import('next').NextConfig} */\n-const nextConfig = {}\n+const nextConfig = {\n+  experimental: {\n\\ No newline at end of file\n+    appDir: true,\n+  },\n+};\n \n-module.exports = withContentlayer(nextConfig);\n+module.exports = withContentlayer(nextConfig);\n"
+                },
+                {
+                    "date": 1697124307798,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,7 +4,8 @@\n const nextConfig = {\n   experimental: {\n     appDir: true,\n   },\n+  output: \"export\",\n };\n \n\\ No newline at end of file\n-module.exports = withContentlayer(nextConfig);\n+module.exports = withContentlayer(nextConfig);\n"
                 }
             ],
             "date": 1696948259495,

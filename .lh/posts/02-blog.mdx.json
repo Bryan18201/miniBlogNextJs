@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 1,
+            "activePatchIndex": 2,
             "patches": [
                 {
                     "date": 1696949451396,
@@ -12,6 +12,10 @@
                 {
                     "date": 1696949458014,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n ---\r\n title: 02 Lorem Ipsum\r\n description: 02 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\r\n-date: 2021-12-24\r\n+date: 2022-12-24\r\n ---\r\n \r\n Ullamco et nostrud magna commodo nostrud occaecat quis pariatur id ipsum. Ipsum\r\n consequat enim id excepteur consequat nostrud esse esse fugiat dolore.\r\n"
+                },
+                {
+                    "date": 1697119973225,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,29 @@\n+---\r\n+title: React JS\r\n+description: React, often referred to as React.js, is an open-source JavaScript library used for building user interfaces, particularly web applications with dynamic and interactive elements.\r\n+date: 2022-12-24\r\n+---\r\n+\r\n+Key features and characteristics of React include:\r\n+\r\n+Component-Based Architecture: React applications are structured as a collection of reusable and independent components. Each component represents a part of the user interface and can have its own state and behavior.\r\n+\r\n+Virtual DOM: React uses a virtual representation of the Document Object Model (DOM) to optimize rendering performance. This virtual DOM allows React to efficiently update only the parts of the actual DOM that have changed, reducing unnecessary re-rendering.\r\n+\r\n+Declarative Syntax: React promotes a declarative approach to building UIs. Developers specify how the UI should look based on the application's state, and React takes care of updating the actual DOM to match this desired state.\r\n+\r\n+JSX: React introduces JSX (JavaScript XML), which is an extension of JavaScript that allows developers to write HTML-like code within their JavaScript files. This helps in defining the structure of components.\r\n+\r\n+Unidirectional Data Flow: React enforces a one-way data flow, which makes it easier to reason about how data changes and propagates through the application. This enhances predictability and maintainability.\r\n+\r\n+Ecosystem: React has a vibrant ecosystem with tools, libraries, and extensions like React Router for routing, Redux for state management, and Material-UI for component styling, making it suitable for building complex applications.\r\n+\r\n+Community Support: React has a large and active community of developers, which means there are plenty of resources, documentation, and community-driven solutions available.\r\n+\r\n+## Esto es un h2\r\n+\r\n+Mollit nisi cillum exercitation minim officia velit laborum non Lorem\r\n+adipisicing dolore. Labore commodo consectetur commodo velit adipisicing irure\r\n+dolore dolor reprehenderit aliquip. Reprehenderit cillum mollit eiusmod\r\n+excepteur elit ipsum aute pariatur in. Cupidatat ex culpa velit culpa ad non\r\n+labore exercitation irure laborum.\n\\ No newline at end of file\n"
                 }
             ],
             "date": 1696949451396,

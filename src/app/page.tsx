@@ -19,7 +19,7 @@ const Home = () => {
       </p>
 
       <div className="text-center">
-        <ButtonLink href="/blog">Ir al blog</ButtonLink>
+        <ButtonLink href="/blog">Go to blog</ButtonLink>
       </div>
     </>
   );

@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 36,
+            "activePatchIndex": 42,
             "patches": [
                 {
                     "date": 1697032525405,
@@ -152,6 +152,30 @@
                 {
                     "date": 1697070993838,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n   children: React.ReactNode;\n }) {\n   return (\n     <html lang=\"en\">\n-      <body className={`${commissioner.className} bg`}>\n+      <body className={`${commissioner.className} bg-gray-900`}>\n         <main className=\"grid min-h-screen items-center py-20 bg-gray-900\">\n           <div className=\"sm:w-[500px] mx-auto rounded-md bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 p-1  md:w-[700px]\">\n             <div className=\"rounded bg-gray-100 p-8\">\n               <Link href=\"/\">\n"
+                },
+                {
+                    "date": 1697123782613,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n }: {\n   children: React.ReactNode;\n }) {\n   return (\n-    <html lang=\"en\">\n+    <html lang=\"en-US\">\n       <body className={`${commissioner.className} bg-gray-900`}>\n         <main className=\"grid min-h-screen items-center py-20 bg-gray-900\">\n           <div className=\"sm:w-[500px] mx-auto rounded-md bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 p-1  md:w-[700px]\">\n             <div className=\"rounded bg-gray-100 p-8\">\n"
+                },
+                {
+                    "date": 1697124065749,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,8 +28,10 @@\n                   alt=\"Imagen avatar de presentación\"\n                   className=\"mx-auto -mt-20 mb-8 rounded-full \"\n                   width={100}\n                   height={100}\n+                  placeholder=\"blur\"\n+  blurDataURL={'/img/logo.png'}\n                 />\n               </Link>\n               {children}\n             </div>\n"
+                },
+                {
+                    "date": 1697124086465,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,9 +29,9 @@\n                   className=\"mx-auto -mt-20 mb-8 rounded-full \"\n                   width={100}\n                   height={100}\n                   placeholder=\"blur\"\n-  blurDataURL={'/img/logo.png'}\n+                  \n                 />\n               </Link>\n               {children}\n             </div>\n"
+                },
+                {
+                    "date": 1697124128214,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,10 +28,10 @@\n                   alt=\"Imagen avatar de presentación\"\n                   className=\"mx-auto -mt-20 mb-8 rounded-full \"\n                   width={100}\n                   height={100}\n-                  placeholder=\"blur\"\n                   \n+                  \n                 />\n               </Link>\n               {children}\n             </div>\n"
+                },
+                {
+                    "date": 1697124160394,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n       <body className={`${commissioner.className} bg-gray-900`}>\n         <main className=\"grid min-h-screen items-center py-20 bg-gray-900\">\n           <div className=\"sm:w-[500px] mx-auto rounded-md bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 p-1  md:w-[700px]\">\n             <div className=\"rounded bg-gray-100 p-8\">\n-              <Link href=\"/\">\n+              <Link href=\"/\" as='image'}>\n                 <img\n                   src={Avatar.src}\n                   alt=\"Imagen avatar de presentación\"\n                   className=\"mx-auto -mt-20 mb-8 rounded-full \"\n"
+                },
+                {
+                    "date": 1697124171877,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n       <body className={`${commissioner.className} bg-gray-900`}>\n         <main className=\"grid min-h-screen items-center py-20 bg-gray-900\">\n           <div className=\"sm:w-[500px] mx-auto rounded-md bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 p-1  md:w-[700px]\">\n             <div className=\"rounded bg-gray-100 p-8\">\n-              <Link href=\"/\" as='image'}>\n+              <Link href=\"/\" >\n                 <img\n                   src={Avatar.src}\n                   alt=\"Imagen avatar de presentación\"\n                   className=\"mx-auto -mt-20 mb-8 rounded-full \"\n"
                 }
             ],
             "date": 1697032525405,

@@ -1,19 +1,45 @@
 ---
-title: 02 Lorem Ipsum
-description: 02 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-date: 2022-12-24
+title: React JS
+description: React, often referred to as React.js, is an open-source JavaScript library used for building user interfaces, particularly web applications with dynamic and interactive elements.
+date: 2022-07-02
 ---
+React, often referred to as React.js, is an open-source JavaScript library used for building user interfaces, particularly web applications with dynamic and interactive elements. Developed and maintained by Facebook, React has gained widespread popularity among developers for its efficiency and flexibility.
 
-Ullamco et nostrud magna commodo nostrud occaecat quis pariatur id ipsum. Ipsum
-consequat enim id excepteur consequat nostrud esse esse fugiat dolore.
-Reprehenderit occaecat exercitation non cupidatat in eiusmod laborum ex eu
-fugiat aute culpa pariatur. Irure elit proident consequat veniam minim ipsum ex
-pariatur.
+Key features and characteristics of React include:
 
-## Esto es un h2
+**Component-Based Architecture:** React applications are structured as a collection of reusable and independent components. Each component represents a part of the user interface and can have its own state and behavior.
 
-Mollit nisi cillum exercitation minim officia velit laborum non Lorem
-adipisicing dolore. Labore commodo consectetur commodo velit adipisicing irure
-dolore dolor reprehenderit aliquip. Reprehenderit cillum mollit eiusmod
-excepteur elit ipsum aute pariatur in. Cupidatat ex culpa velit culpa ad non
-labore exercitation irure laborum.
+**Virtual DOM:** React uses a virtual representation of the Document Object Model (DOM) to optimize rendering performance. This virtual DOM allows React to efficiently update only the parts of the actual DOM that have changed, reducing unnecessary re-rendering.
+
+**Declarative Syntax:** React promotes a declarative approach to building UIs. Developers specify how the UI should look based on the application's state, and React takes care of updating the actual DOM to match this desired state.
+
+**JSX:** React introduces JSX (JavaScript XML), which is an extension of JavaScript that allows developers to write HTML-like code within their JavaScript files. This helps in defining the structure of components.
+
+**Unidirectional Data Flow:** React enforces a one-way data flow, which makes it easier to reason about how data changes and propagates through the application. This enhances predictability and maintainability.
+
+**Ecosystem:** React has a vibrant ecosystem with tools, libraries, and extensions like React Router for routing, Redux for state management, and Material-UI for component styling, making it suitable for building complex applications.
+
+**Community Support:** React has a large and active community of developers, which means there are plenty of resources, documentation, and community-driven solutions available.
+
+## Example of code
+
+
+```sh
+npm install -g create-react-app
+```
+
+
+```jsx
+import React from 'react';
+
+function SimpleComponent(props) {
+  return (
+    <div>
+      <h1>{props.title}</h1>
+      <p>This is a simple React component.</p>
+    </div>
+  );
+}
+
+export default SimpleComponent;
+```

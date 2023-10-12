@@ -13,14 +13,14 @@ const PostItem = ({ post }: Props) => {
         <Link href={post.url}>{post.title}</Link>
       </h2>
       <time>
-        {new Date(post.date).toLocaleDateString("es-ES", {
+        {new Date(post.date).toLocaleDateString("en-US", {
           year: "numeric",
           month: "long",
           day: "numeric",
         })}
       </time>
       <p>{post.description}</p>
-      <ButtonLink href={post.url}>Seguir leyendo</ButtonLink>
+      <ButtonLink href={post.url}>Read More...</ButtonLink>
     </article>
   );
 };

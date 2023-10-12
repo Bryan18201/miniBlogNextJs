@@ -1,0 +1,22 @@
+{
+    "sourceFile": "src/components/PostItem.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1697123500578,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1697123905825,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,27 @@\n+import { Post } from \"contentlayer/generated\";\r\n+import Link from \"next/link\";\r\n+import ButtonLink from \"./ButtonLink\";\r\n+\r\n+interface Props {\r\n+  post: Post;\r\n+}\r\n+\r\n+const PostItem = ({ post }: Props) => {\r\n+  return (\r\n+    <article className=\"rounded border p-4\">\r\n+      <h2 className=\"bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 bg-clip-text text-4xl font-bold text-transparent\">\r\n+        <Link href={post.url}>{post.title}</Link>\r\n+      </h2>\r\n+      <time>\r\n+        {new Date(post.date).toLocaleDateString(\"-US\", {\r\n+          year: \"numeric\",\r\n+          month: \"long\",\r\n+          day: \"numeric\",\r\n+        })}\r\n+      </time>\r\n+      <p>{post.description}</p>\r\n+      <ButtonLink href={post.url}>Read More...</ButtonLink>\r\n+    </article>\r\n+  );\r\n+};\r\n+export default PostItem;\r\n"
+                }
+            ],
+            "date": 1697123500578,
+            "name": "Commit-0",
+            "content": "import { Post } from \"contentlayer/generated\";\r\nimport Link from \"next/link\";\r\nimport ButtonLink from \"./ButtonLink\";\r\n\r\ninterface Props {\r\n  post: Post;\r\n}\r\n\r\nconst PostItem = ({ post }: Props) => {\r\n  return (\r\n    <article className=\"rounded border p-4\">\r\n      <h2 className=\"bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 bg-clip-text text-4xl font-bold text-transparent\">\r\n        <Link href={post.url}>{post.title}</Link>\r\n      </h2>\r\n      <time>\r\n        {new Date(post.date).toLocaleDateString(\"es-ES\", {\r\n          year: \"numeric\",\r\n          month: \"long\",\r\n          day: \"numeric\",\r\n        })}\r\n      </time>\r\n      <p>{post.description}</p>\r\n      <ButtonLink href={post.url}>Read More...</ButtonLink>\r\n    </article>\r\n  );\r\n};\r\nexport default PostItem;\r\n"
+        }
+    ]
+}

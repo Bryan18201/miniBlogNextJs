@@ -1,0 +1,22 @@
+{
+    "sourceFile": "next.config.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1696948259495,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1696948270404,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n+const { withContentlayer } = require(\"next-contentlayer\");\n \n-\n /** @type {import('next').NextConfig} */\n const nextConfig = {}\n \n-module.exports = nextConfig\n+module.exports = withContentlayer(nextConfig);\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1696948259495,
+            "name": "Commit-0",
+            "content": "\n\n/** @type {import('next').NextConfig} */\nconst nextConfig = {}\n\nmodule.exports = nextConfig\n"
+        }
+    ]
+}

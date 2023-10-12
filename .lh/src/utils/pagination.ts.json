@@ -1,0 +1,86 @@
+{
+    "sourceFile": "src/utils/pagination.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 17,
+            "patches": [
+                {
+                    "date": 1697052100670,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1697052111524,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,18 @@\n+\r\n+const totalPosts = posts.length;\r\n+const postsPerPage = 2;\r\n+export const totalPages = Math.ceil(totalPosts / postsPerPage);\r\n+\r\n+\r\n+\r\n+export const getPagination = (currentPage: number = 1) => {\r\n+    if(currentPage > totalPages){\r\n+        throw new Error(`Page ${currentPage} does not exist`)\r\n+    }\r\n+    const offset = (currentPage - 1) * postsPerPage;\r\n+    const currentPosts = posts.slice(offset, offset + postsPerPage);\r\n+\r\n+    return {\r\n+        currentPosts,\r\n+    };\r\n+};\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1697052121446,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n \r\n const totalPosts = posts.length;\r\n const postsPerPage = 2;\r\n-export const totalPages = Math.ceil(totalPosts / postsPerPage);\r\n+const totalPages = Math.ceil(totalPosts / postsPerPage);\r\n \r\n \r\n \r\n export const getPagination = (currentPage: number = 1) => {\r\n@@ -14,23 +14,5 @@\n \r\n     return {\r\n         currentPosts,\r\n     };\r\n-};\n-\r\n-const totalPosts = posts.length;\r\n-const postsPerPage = 2;\r\n-export const totalPages = Math.ceil(totalPosts / postsPerPage);\r\n-\r\n-\r\n-\r\n-export const getPostsPagination = (currentPage: number = 1) => {\r\n-    if(currentPage > totalPages){\r\n-        throw new Error(`Page ${currentPage} does not exist`)\r\n-    }\r\n-    const offset = (currentPage - 1) * postsPerPage;\r\n-    const currentPosts = posts.slice(offset, offset + postsPerPage);\r\n-\r\n-    return {\r\n-        currentPosts,\r\n-    };\r\n };\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1697052131403,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,15 +1,16 @@\n \r\n-const totalPosts = posts.length;\r\n-const postsPerPage = 2;\r\n-const totalPages = Math.ceil(totalPosts / postsPerPage);\r\n \r\n \r\n-\r\n export const getPagination = (currentPage: number = 1) => {\r\n     if(currentPage > totalPages){\r\n         throw new Error(`Page ${currentPage} does not exist`)\r\n     }\r\n+    \r\n+    const totalPosts = posts.length;\r\n+    const postsPerPage = 2;\r\n+    const totalPages = Math.ceil(totalPosts / postsPerPage);\r\n+    \r\n     const offset = (currentPage - 1) * postsPerPage;\r\n     const currentPosts = posts.slice(offset, offset + postsPerPage);\r\n \r\n     return {\r\n"
+                },
+                {
+                    "date": 1697052232593,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,16 +1,16 @@\n \r\n \r\n \r\n-export const getPagination = (currentPage: number = 1) => {\r\n+export const getPagination = (currentPage: strin = 1) => {\r\n     if(currentPage > totalPages){\r\n         throw new Error(`Page ${currentPage} does not exist`)\r\n     }\r\n     \r\n     const totalPosts = posts.length;\r\n     const postsPerPage = 2;\r\n     const totalPages = Math.ceil(totalPosts / postsPerPage);\r\n-    \r\n+\r\n     const offset = (currentPage - 1) * postsPerPage;\r\n     const currentPosts = posts.slice(offset, offset + postsPerPage);\r\n \r\n     return {\r\n"
+                },
+                {
+                    "date": 1697052256812,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,11 @@\n \r\n \r\n \r\n-export const getPagination = (currentPage: strin = 1) => {\r\n+export const getPagination = (currentPage: string = 1) => {\r\n+    \r\n+    \r\n+    \r\n     if(currentPage > totalPages){\r\n         throw new Error(`Page ${currentPage} does not exist`)\r\n     }\r\n     \r\n"
+                },
+                {
+                    "date": 1697052268962,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,13 @@\n \r\n \r\n \r\n export const getPagination = (currentPage: string = 1) => {\r\n+    if (!/^\\d+$/.test(currentPage)) {\r\n+        throw new Error(\"Not a number\");\r\n+      }\r\n     \r\n     \r\n-    \r\n     if(currentPage > totalPages){\r\n         throw new Error(`Page ${currentPage} does not exist`)\r\n     }\r\n     \r\n"
+                },
+                {
+                    "date": 1697052274765,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n \r\n \r\n \r\n-export const getPagination = (currentPage: string = 1) => {\r\n+export const getPagination = (currentPage: string = \"1\") => {\r\n     if (!/^\\d+$/.test(currentPage)) {\r\n         throw new Error(\"Not a number\");\r\n       }\r\n     \r\n"
+                },
+                {
+                    "date": 1697052296877,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n \r\n+const is\r\n \r\n-\r\n export const getPagination = (currentPage: string = \"1\") => {\r\n     if (!/^\\d+$/.test(currentPage)) {\r\n         throw new Error(\"Not a number\");\r\n       }\r\n"
+                },
+                {
+                    "date": 1697052307393,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n \r\n-const is\r\n+const isNumber = (value: string) => !/^\\d+$/.test(currentPage)\r\n \r\n export const getPagination = (currentPage: string = \"1\") => {\r\n     if (!/^\\d+$/.test(currentPage)) {\r\n         throw new Error(\"Not a number\");\r\n"
+                },
+                {
+                    "date": 1697052313672,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,24 @@\n+\r\n+const isNumber = (value: string) => !/^\\d+$/.test(value);\r\n+\r\n+export const getPagination = (currentPage: string = \"1\") => {\r\n+    if (!/^\\d+$/.test(currentPage)) {\r\n+        throw new Error(\"Not a number\");\r\n+      }\r\n+    \r\n+    \r\n+    if(currentPage > totalPages){\r\n+        throw new Error(`Page ${currentPage} does not exist`)\r\n+    }\r\n+    \r\n+    const totalPosts = posts.length;\r\n+    const postsPerPage = 2;\r\n+    const totalPages = Math.ceil(totalPosts / postsPerPage);\r\n+\r\n+    const offset = (currentPage - 1) * postsPerPage;\r\n+    const currentPosts = posts.slice(offset, offset + postsPerPage);\r\n+\r\n+    return {\r\n+        currentPosts,\r\n+    };\r\n+};\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1697052320253,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,24 @@\n+\r\n+const isNumber = (value: string) => !/^\\d+$/.test(value);\r\n+\r\n+export const getPagination = (currentPage: string = \"1\") => {\r\n+    if (!isNumber) {\r\n+        throw new Error(\"Not a number\");\r\n+      }\r\n+    \r\n+    \r\n+    if(currentPage > totalPages){\r\n+        throw new Error(`Page ${currentPage} does not exist`)\r\n+    }\r\n+    \r\n+    const totalPosts = posts.length;\r\n+    const postsPerPage = 2;\r\n+    const totalPages = Math.ceil(totalPosts / postsPerPage);\r\n+\r\n+    const offset = (currentPage - 1) * postsPerPage;\r\n+    const currentPosts = posts.slice(offset, offset + postsPerPage);\r\n+\r\n+    return {\r\n+        currentPosts,\r\n+    };\r\n+};\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1697052328162,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n \r\n const isNumber = (value: string) => !/^\\d+$/.test(value);\r\n \r\n export const getPagination = (currentPage: string = \"1\") => {\r\n-    if (!isNumber) {\r\n+    if (!isNumber(currentPage) === fal) {\r\n         throw new Error(\"Not a number\");\r\n       }\r\n     \r\n     \r\n@@ -20,53 +20,5 @@\n \r\n     return {\r\n         currentPosts,\r\n     };\r\n-};\n-\r\n-const isNumber = (value: string) => !/^\\d+$/.test(value);\r\n-\r\n-export const getPagination = (currentPage: string = \"1\") => {\r\n-    if (!/^\\d+$/.test(currentPage)) {\r\n-        throw new Error(\"Not a number\");\r\n-      }\r\n-    \r\n-    \r\n-    if(currentPage > totalPages){\r\n-        throw new Error(`Page ${currentPage} does not exist`)\r\n-    }\r\n-    \r\n-    const totalPosts = posts.length;\r\n-    const postsPerPage = 2;\r\n-    const totalPages = Math.ceil(totalPosts / postsPerPage);\r\n-\r\n-    const offset = (currentPage - 1) * postsPerPage;\r\n-    const currentPosts = posts.slice(offset, offset + postsPerPage);\r\n-\r\n-    return {\r\n-        currentPosts,\r\n-    };\r\n-};\n-\r\n-const isNumber = (value: string) => !/^\\d+$/.test(currentPage)\r\n-\r\n-export const getPagination = (currentPage: string = \"1\") => {\r\n-    if (!/^\\d+$/.test(currentPage)) {\r\n-        throw new Error(\"Not a number\");\r\n-      }\r\n-    \r\n-    \r\n-    if(currentPage > totalPages){\r\n-        throw new Error(`Page ${currentPage} does not exist`)\r\n-    }\r\n-    \r\n-    const totalPosts = posts.length;\r\n-    const postsPerPage = 2;\r\n-    const totalPages = Math.ceil(totalPosts / postsPerPage);\r\n-\r\n-    const offset = (currentPage - 1) * postsPerPage;\r\n-    const currentPosts = posts.slice(offset, offset + postsPerPage);\r\n-\r\n-    return {\r\n-        currentPosts,\r\n-    };\r\n };\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1697052335586,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,24 @@\n+\r\n+const isNumber = (value: string) => !/^\\d+$/.test(value);\r\n+\r\n+export const getPagination = (currentPage: string = \"1\") => {\r\n+    if (!isNumber(currentPage)) {\r\n+        throw new Error(\"Not a number\");\r\n+      }\r\n+    \r\n+    \r\n+    if(currentPage > totalPages){\r\n+        throw new Error(`Page ${currentPage} does not exist`)\r\n+    }\r\n+    \r\n+    const totalPosts = posts.length;\r\n+    const postsPerPage = 2;\r\n+    const totalPages = Math.ceil(totalPosts / postsPerPage);\r\n+\r\n+    const offset = (currentPage - 1) * postsPerPage;\r\n+    const currentPosts = posts.slice(offset, offset + postsPerPage);\r\n+\r\n+    return {\r\n+        currentPosts,\r\n+    };\r\n+};\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1697052388233,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n \r\n const isNumber = (value: string) => !/^\\d+$/.test(value);\r\n \r\n-export const getPagination = (currentPage: string = \"1\") => {\r\n+export const getPagination = (items, currentPage: string = \"1\") => {\r\n     if (!isNumber(currentPage)) {\r\n         throw new Error(\"Not a number\");\r\n       }\r\n     \r\n@@ -20,29 +20,5 @@\n \r\n     return {\r\n         currentPosts,\r\n     };\r\n-};\n-\r\n-const isNumber = (value: string) => !/^\\d+$/.test(value);\r\n-\r\n-export const getPagination = (currentPage: string = \"1\") => {\r\n-    if (!isNumber(currentPage) === fal) {\r\n-        throw new Error(\"Not a number\");\r\n-      }\r\n-    \r\n-    \r\n-    if(currentPage > totalPages){\r\n-        throw new Error(`Page ${currentPage} does not exist`)\r\n-    }\r\n-    \r\n-    const totalPosts = posts.length;\r\n-    const postsPerPage = 2;\r\n-    const totalPages = Math.ceil(totalPosts / postsPerPage);\r\n-\r\n-    const offset = (currentPage - 1) * postsPerPage;\r\n-    const currentPosts = posts.slice(offset, offset + postsPerPage);\r\n-\r\n-    return {\r\n-        currentPosts,\r\n-    };\r\n };\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1697052408352,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,11 +6,11 @@\n         throw new Error(\"Not a number\");\r\n       }\r\n     \r\n     \r\n-    if(currentPage > totalPages){\r\n-        throw new Error(`Page ${currentPage} does not exist`)\r\n-    }\r\n+    // if(currentPage > totalPages){\r\n+    //     throw new Error(`Page ${currentPage} does not exist`)\r\n+    // }\r\n     \r\n     const totalPosts = posts.length;\r\n     const postsPerPage = 2;\r\n     const totalPages = Math.ceil(totalPosts / postsPerPage);\r\n"
+                },
+                {
+                    "date": 1697052415895,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n     // if(currentPage > totalPages){\r\n     //     throw new Error(`Page ${currentPage} does not exist`)\r\n     // }\r\n     \r\n-    const totalPosts = ii.length;\r\n+    const totalPosts = i.length;\r\n     const postsPerPage = 2;\r\n     const totalPages = Math.ceil(totalPosts / postsPerPage);\r\n \r\n     const offset = (currentPage - 1) * postsPerPage;\r\n"
+                },
+                {
+                    "date": 1697052448405,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n \r\n const isNumber = (value: string) => !/^\\d+$/.test(value);\r\n \r\n-export const getPagination = (items, postPerpage = 1, currentPage  = \"1\") => {\r\n+export const getPagination = (items, postPerpage = 1, currentPage = \"1\") => {\r\n     if (!isNumber(currentPage)) {\r\n         throw new Error(\"Not a number\");\r\n       }\r\n     \r\n"
+                }
+            ],
+            "date": 1697052100670,
+            "name": "Commit-0",
+            "content": "\r\nconst totalPosts = posts.length;\r\nconst postsPerPage = 2;\r\nexport const totalPages = Math.ceil(totalPosts / postsPerPage);\r\n\r\n\r\n\r\nexport const getPostsPagination = (currentPage: number = 1) => {\r\n    if(currentPage > totalPages){\r\n        throw new Error(`Page ${currentPage} does not exist`)\r\n    }\r\n    const offset = (currentPage - 1) * postsPerPage;\r\n    const currentPosts = posts.slice(offset, offset + postsPerPage);\r\n\r\n    return {\r\n        currentPosts,\r\n    };\r\n};"
+        }
+    ]
+}

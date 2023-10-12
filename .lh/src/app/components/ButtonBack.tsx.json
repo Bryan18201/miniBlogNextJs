@@ -1,0 +1,54 @@
+{
+    "sourceFile": "src/app/components/ButtonBack.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 9,
+            "patches": [
+                {
+                    "date": 1697050993597,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1697051001835,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from 'react'\r\n \r\n const ButtonBack = () => {\r\n   return (\r\n-    <div>ButtonBack</div>\r\n+    <button></button>\r\n   )\r\n }\r\n \r\n export default ButtonBack\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1697051009952,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import React from 'react'\r\n \r\n-const ButtonBack = () => {\r\n+const ButtonBack = ({children}) => {\r\n   return (\r\n     <button></button>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1697051015908,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,11 @@\n import React from 'react'\r\n \r\n const ButtonBack = ({children}) => {\r\n   return (\r\n-    <button></button>\r\n+    <button>\r\n+        {children}\r\n+    </button>\r\n   )\r\n }\r\n \r\n export default ButtonBack\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1697051021273,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n import React from 'react'\r\n \r\n+\r\n const ButtonBack = ({children}) => {\r\n   return (\r\n     <button>\r\n         {children}\r\n"
+                },
+                {
+                    "date": 1697051027513,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,15 @@\n+import React from 'react'\r\n+\r\n+interface Props{\r\n+    \r\n+}\r\n+\r\n+const ButtonBack = ({children}) => {\r\n+  return (\r\n+    <button>\r\n+        {children}\r\n+    </button>\r\n+  )\r\n+}\r\n+\r\n+export default ButtonBack\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1697051042881,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,15 @@\n+import React from 'react'\r\n+\r\n+interface Props{\r\n+    children: \r\n+}\r\n+\r\n+const ButtonBack = ({children}) => {\r\n+  return (\r\n+    <button onClick={}>\r\n+        {children}\r\n+    </button>\r\n+  )\r\n+}\r\n+\r\n+export default ButtonBack\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1697051049931,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,16 @@\n+import React from 'react'\r\n+\r\n+interface Props{\r\n+    children: \r\n+}\r\n+\r\n+const ButtonBack = ({children}) => {\r\n+    const router\r\n+  return (\r\n+    <button onClick={}>\r\n+        {children}\r\n+    </button>\r\n+  )\r\n+}\r\n+\r\n+export default ButtonBack\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1697051061534,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from 'react'\r\n \r\n-interface Props{\r\n-    children: \r\n-}\r\n+// interface Props{\r\n+//     children: \r\n+// }\r\n \r\n const ButtonBack = ({children}) => {\r\n     const router = \r\n   return (\r\n"
+                },
+                {
+                    "date": 1697051097942,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,15 @@\n+\r\n+// interface Props{\r\n+//     children: \r\n+// }\r\n+\r\n+const ButtonBack = ({children}) => {\r\n+    const router = use\r\n+  return (\r\n+    <button onClick={}>\r\n+        {children}\r\n+    </button>\r\n+  )\r\n+}\r\n+\r\n+export default ButtonBack\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1697050993597,
+            "name": "Commit-0",
+            "content": "import React from 'react'\r\n\r\nconst ButtonBack = () => {\r\n  return (\r\n    <div>ButtonBack</div>\r\n  )\r\n}\r\n\r\nexport default ButtonBack"
+        }
+    ]
+}

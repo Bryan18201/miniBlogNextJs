@@ -1,0 +1,54 @@
+{
+    "sourceFile": "src/app/page/[number]/page.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 9,
+            "patches": [
+                {
+                    "date": 1697034884997,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1697034892736,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,9 @@\n+import React from 'react'\r\n+\r\n+const LayoutPages = () => {\r\n+  return (\r\n+    <div>LayoutPages</div>\r\n+  )\r\n+}\r\n+\r\n+export default LayoutPages\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1697034936422,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,13 @@\n import React from 'react'\r\n \r\n const LayoutPages = () => {\r\n   return (\r\n-    <div>LayoutPages</div>\r\n+    <>\r\n+      {posts.map((post) => (\r\n+        <PostItem key={post._raw.flattenedPath} post={post} />\r\n+      ))}\r\n+    </>\r\n   )\r\n }\r\n \r\n export default LayoutPages\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1697034946365,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,9 @@\n+import React from 'react'\r\n+\r\n+const LayoutPages = () => {\r\n+  return (\r\n+    <div>LayoutPages</div>\r\n+  )\r\n+}\r\n+\r\n+export default LayoutPages\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1697034976154,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,31 +1,14 @@\n import React from 'react'\r\n \r\n const LayoutPages = () => {\r\n   return (\r\n-    <div>LayoutPages</div>\r\n+    <div>\r\n+      <h1 className=\"text-center my-4 text-3xl\">Posts</h1>\r\n+      <div className=\"grid gap-4\">\r\n+        <PostsLists posts={posts} />\r\n+      </div>\r\n+    </div>\r\n   )\r\n }\r\n \r\n-export default LayoutPages\n-import React from 'react'\r\n-\r\n-const LayoutPages = () => {\r\n-  return (\r\n-    <>\r\n-      {posts.map((post) => (\r\n-        <PostItem key={post._raw.flattenedPath} post={post} />\r\n-      ))}\r\n-    </>\r\n-  )\r\n-}\r\n-\r\n-export default LayoutPages\n-import React from 'react'\r\n-\r\n-const page = () => {\r\n\\ No newline at end of file\n-  return (\r\n-    <div>page</div>\r\n-  )\r\n-}\r\n-\r\n-export default page\n+export default LayoutPages\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1697034981334,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,15 @@\n+import PostsLists from '@/app/components/PostsLists'\r\n+import React from 'react'\r\n+\r\n+const LayoutPages = () => {\r\n+  return (\r\n+    <div>\r\n+      <h1 className=\"text-center my-4 text-3xl\">Posts</h1>\r\n+      <div className=\"grid gap-4\">\r\n+        <PostsLists posts={posts} />\r\n+      </div>\r\n+    </div>\r\n+  )\r\n+}\r\n+\r\n+export default LayoutPages\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1697035002626,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,12 @@\n-import PostsLists from '@/app/components/PostsLists'\r\n-import React from 'react'\r\n+import { allPosts, Post } from \"contentlayer/generated\";\r\n+import PostsLists from \"../components/PostsLists\";\r\n \r\n+const posts: Post[] = allPosts.sort((a, b) => b.date.localeCompare(a.date));\r\n+\r\n+const totalPosts = posts.length;\r\n+const postsPerPage = 2;\r\n+const totalPages = Math.ceil(totalPosts / postsPerPage)\r\n const LayoutPages = () => {\r\n   return (\r\n     <div>\r\n       <h1 className=\"text-center my-4 text-3xl\">Posts</h1>\r\n"
+                },
+                {
+                    "date": 1697035016029,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,15 @@\n+import PostsLists from '@/app/components/PostsLists'\r\n+import React from 'react'\r\n+\r\n+const LayoutPages = () => {\r\n+  return (\r\n+    <div>\r\n+      <h1 className=\"text-center my-4 text-3xl\">Posts</h1>\r\n+      <div className=\"grid gap-4\">\r\n+        <PostsLists posts={posts} />\r\n+      </div>\r\n+    </div>\r\n+  )\r\n+}\r\n+\r\n+export default LayoutPages\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1697035023455,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import PostsLists from '@/app/components/PostsLists'\r\n import { allPosts, Post } from \"contentlayer/generated\";\r\n-import PostsLists from \"../components/PostsLists\";\r\n \r\n+\r\n const posts: Post[] = allPosts.sort((a, b) => b.date.localeCompare(a.date));\r\n \r\n const totalPosts = posts.length;\r\n const postsPerPage = 2;\r\n"
+                },
+                {
+                    "date": 1697035028520,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,12 @@\n-import PostsLists from '@/app/components/PostsLists'\r\n+import PostsLists from \"@/app/components/PostsLists\";\r\n import { allPosts, Post } from \"contentlayer/generated\";\r\n \r\n-\r\n const posts: Post[] = allPosts.sort((a, b) => b.date.localeCompare(a.date));\r\n \r\n const totalPosts = posts.length;\r\n const postsPerPage = 2;\r\n-const totalPages = Math.ceil(totalPosts / postsPerPage)\r\n+const totalPages = Math.ceil(totalPosts / postsPerPage);\r\n \r\n const LayoutPages = () => {\r\n   return (\r\n     <div>\r\n@@ -15,8 +14,8 @@\n       <div className=\"grid gap-4\">\r\n         <PostsLists posts={posts} />\r\n       </div>\r\n     </div>\r\n-  )\r\n-}\r\n+  );\r\n+};\r\n\\ No newline at end of file\n \r\n-export default LayoutPages\n+export default LayoutPages;\r\n"
+                }
+            ],
+            "date": 1697034884997,
+            "name": "Commit-0",
+            "content": "import React from 'react'\r\n\r\nconst page = () => {\r\n  return (\r\n    <div>page</div>\r\n  )\r\n}\r\n\r\nexport default page"
+        }
+    ]
+}

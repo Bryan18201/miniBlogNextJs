@@ -1,0 +1,22 @@
+{
+    "sourceFile": "src/components/PostsLists.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1697070650907,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1697070695598,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n \r\n const PostsLists = ({ posts }: Props) => {\r\n   return (\r\n     <>\r\n-      {posts?.map((post) => (\r\n+      {posts.map((post) => (\r\n         <PostItem\r\n           key={post._raw.flattenedPath}\r\n           post={post}\r\n         />\r\n"
+                }
+            ],
+            "date": 1697070650907,
+            "name": "Commit-0",
+            "content": "import { Post } from \"contentlayer/generated\";\r\nimport PostItem from \"./PostItem\";\r\n\r\ninterface Props {\r\n  posts: Post[];\r\n}\r\n\r\nconst PostsLists = ({ posts }: Props) => {\r\n  return (\r\n    <>\r\n      {posts?.map((post) => (\r\n        <PostItem\r\n          key={post._raw.flattenedPath}\r\n          post={post}\r\n        />\r\n      ))}\r\n    </>\r\n  );\r\n};\r\nexport default PostsLists;\r\n"
+        }
+    ]
+}

@@ -1,0 +1,78 @@
+{
+    "sourceFile": "src/app/components/ButtonLink.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 15,
+            "patches": [
+                {
+                    "date": 1697050319453,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1697050326285,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,9 @@\n-rafc\n\\ No newline at end of file\n+import React from 'react'\r\n+\r\n+const ButtonLink = () => {\r\n+  return (\r\n+    <\r\n+  )\r\n+}\r\n+\r\n+export default ButtonLink\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1697050336703,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,11 @@\n+import Link from 'next/link'\r\n import React from 'react'\r\n \r\n const ButtonLink = () => {\r\n   return (\r\n-    <\r\n+    <Link\r\n+\r\n   )\r\n }\r\n \r\n export default ButtonLink\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1697050345881,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import React from 'react'\r\n \r\n const ButtonLink = () => {\r\n   return (\r\n-    <Link\r\n+    <Link href={href}></Link>\r\n \r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1697050354010,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import Link from 'next/link'\r\n import React from 'react'\r\n \r\n-const ButtonLink = () => {\r\n+const ButtonLink = ({href, text}) => {\r\n   return (\r\n     <Link href={href}></Link>\r\n \r\n   )\r\n"
+                },
+                {
+                    "date": 1697050362718,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,14 @@\n import Link from 'next/link'\r\n import React from 'react'\r\n \r\n+\r\n+\r\n const ButtonLink = ({href, text}) => {\r\n   return (\r\n-    <Link href={href}></Link>\r\n+    <Link href={href}>\r\n+        {text}\r\n+    </Link>\r\n \r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1697050368815,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,11 @@\n import Link from 'next/link'\r\n import React from 'react'\r\n \r\n+interface Props{\r\n+    \r\n+}\r\n \r\n-\r\n const ButtonLink = ({href, text}) => {\r\n   return (\r\n     <Link href={href}>\r\n         {text}\r\n"
+                },
+                {
+                    "date": 1697050376693,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,10 @@\n import Link from 'next/link'\r\n import React from 'react'\r\n \r\n interface Props{\r\n-    \r\n+    href: string;\r\n+    text: string;\r\n }\r\n \r\n const ButtonLink = ({href, text}) => {\r\n   return (\r\n"
+                },
+                {
+                    "date": 1697050381845,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n     href: string;\r\n     text: string;\r\n }\r\n \r\n-const ButtonLink = ({href, text}) => {\r\n+const ButtonLink = ({href, text}: Props) => {\r\n   return (\r\n     <Link href={href}>\r\n         {text}\r\n     </Link>\r\n"
+                },
+                {
+                    "date": 1697050418888,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n     href: string;\r\n     text: string;\r\n }\r\n \r\n-const ButtonLink = ({href, text}: Props) => {\r\n+const ButtonLink = ({href, children}: Props) => {\r\n   return (\r\n     <Link href={href}>\r\n         {text}\r\n     </Link>\r\n"
+                },
+                {
+                    "date": 1697050425233,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,18 @@\n+import Link from 'next/link'\r\n+import React from 'react'\r\n+\r\n+interface Props{\r\n+    href: string;\r\n+    text: string;\r\n+}\r\n+\r\n+const ButtonLink = ({href, children}: Props) => {\r\n+  return (\r\n+    <Link href={href}>\r\n+        {children}\r\n+    </Link>\r\n+\r\n+  )\r\n+}\r\n+\r\n+export default ButtonLink\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1697050433757,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import React from 'react'\r\n \r\n interface Props{\r\n     href: string;\r\n-    text: string;\r\n+    children: string;\r\n }\r\n \r\n const ButtonLink = ({href, children}: Props) => {\r\n   return (\r\n@@ -14,23 +14,5 @@\n \r\n   )\r\n }\r\n \r\n-export default ButtonLink\n-import Link from 'next/link'\r\n-import React from 'react'\r\n-\r\n-interface Props{\r\n-    href: string;\r\n-    text: string;\r\n-}\r\n-\r\n-const ButtonLink = ({href, children}: Props) => {\r\n-  return (\r\n-    <Link href={href}>\r\n-        {text}\r\n-    </Link>\r\n-\r\n-  )\r\n-}\r\n-\r\n export default ButtonLink\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1697050440704,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import React from 'react'\r\n \r\n interface Props{\r\n     href: string;\r\n-    children: string;\r\n+    children: React.ReactNode;\r\n }\r\n \r\n const ButtonLink = ({href, children}: Props) => {\r\n   return (\r\n"
+                },
+                {
+                    "date": 1697050637395,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,18 @@\n+import Link from 'next/link'\r\n+import {React} from 'react'\r\n+\r\n+interface Props{\r\n+    href: string;\r\n+    children: React.ReactNode;\r\n+}\r\n+\r\n+const ButtonLink = ({href, children}: Props) => {\r\n+  return (\r\n+    <Link href={href}>\r\n+        {children}\r\n+    </Link>\r\n+\r\n+  )\r\n+}\r\n+\r\n+export default ButtonLink\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1697050643039,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import Link from 'next/link'\r\n-import {React} from 'react'\r\n+import {ReactNode} from 'react'\r\n \r\n interface Props{\r\n     href: string;\r\n     children: React.ReactNode;\r\n@@ -14,23 +14,5 @@\n \r\n   )\r\n }\r\n \r\n-export default ButtonLink\n-import Link from 'next/link'\r\n-import React from 'react'\r\n-\r\n-interface Props{\r\n-    href: string;\r\n-    children: React.ReactNode;\r\n-}\r\n-\r\n-const ButtonLink = ({href, children}: Props) => {\r\n-  return (\r\n-    <Link href={href}>\r\n-        {children}\r\n-    </Link>\r\n-\r\n-  )\r\n-}\r\n-\r\n export default ButtonLink\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1697050718690,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,19 @@\n+import Link from 'next/link'\r\n+import {ReactNode} from 'react'\r\n+\r\n+interface Props{\r\n+    href: string;\r\n+    children: ReactNode;\r\n+}\r\n+\r\n+const ButtonLink = ({href, children}: Props) => {\r\n+  return (\r\n+    <Link href={href}\r\n+    className=\"rounded bg-gradient-to-r from-pink-500 to-yellow-500 px-4 py-2 text-white hover:from-green-400 hover:to-blue-500\">\r\n+        {children}\r\n+    </Link>\r\n+\r\n+  )\r\n+}\r\n+\r\n+export default ButtonLink\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1697050319453,
+            "name": "Commit-0",
+            "content": "rafc"
+        }
+    ]
+}

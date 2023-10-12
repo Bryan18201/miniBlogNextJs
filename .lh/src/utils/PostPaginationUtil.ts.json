@@ -1,0 +1,70 @@
+{
+    "sourceFile": "src/utils/PostPaginationUtil.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 13,
+            "patches": [
+                {
+                    "date": 1697038310107,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1697038326944,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,7 @@\n+const totalPosts = posts.length;\r\n+const postsPerPage = 2;\r\n+const totalPages = Math.ceil(totalPosts / postsPerPage);\r\n+\r\n+\r\n+\r\n+export const getPostsPagination = ()\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1697038348982,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,8 @@\n+import { allPosts, Post } from \"contentlayer/generated\";\r\n+const totalPosts = posts.length;\r\n+const postsPerPage = 2;\r\n+const totalPages = Math.ceil(totalPosts / postsPerPage);\r\n+\r\n+\r\n+\r\n+export const getPostsPagination = ()\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1697038377927,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,13 @@\n+import { allPosts, Post } from \"contentlayer/generated\";\r\n+\r\n+const posts: Post[] = allPosts.sort((a, b) => b.date.localeCompare(a.date));\r\n+\r\n+\r\n+const totalPosts = posts.length;\r\n+\r\n+const postsPerPage = 2;\r\n+const totalPages = Math.ceil(totalPosts / postsPerPage);\r\n+\r\n+\r\n+\r\n+export const getPostsPagination = ()\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1697038392849,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,14 @@\n+import { allPosts, Post } from \"contentlayer/generated\";\r\n+\r\n+const posts: Post[] = allPosts.sort((a, b) => b.date.localeCompare(a.date));\r\n+\r\n+\r\n+const totalPosts = posts.length;\r\n+const postsPerPage = 2;\r\n+const totalPages = Math.ceil(totalPosts / postsPerPage);\r\n+\r\n+\r\n+\r\n+export const getPostsPagination = (page: number) => {\r\n+    \r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1697038399600,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,16 @@\n+import { allPosts, Post } from \"contentlayer/generated\";\r\n+\r\n+const posts: Post[] = allPosts.sort((a, b) => b.date.localeCompare(a.date));\r\n+\r\n+\r\n+const totalPosts = posts.length;\r\n+const postsPerPage = 2;\r\n+const totalPages = Math.ceil(totalPosts / postsPerPage);\r\n+\r\n+\r\n+\r\n+export const getPostsPagination = (page: number) => {\r\n+    const totalPosts = posts.length;\r\n+const postsPerPage = 2;\r\n+const totalPages = Math.ceil(totalPosts / postsPerPage);\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1697038420643,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,16 @@\n+import { allPosts, Post } from \"contentlayer/generated\";\r\n+\r\n+const posts: Post[] = allPosts.sort((a, b) => b.date.localeCompare(a.date));\r\n+\r\n+\r\n+const totalPosts = posts.length;\r\n+const postsPerPage = 2;\r\n+const totalPages = Math.ceil(totalPosts / postsPerPage);\r\n+\r\n+\r\n+\r\n+export const getPostsPagination = (page: number) => {\r\n+    const currentPage = parseInt(params.number);\r\n+    const offset = (currentPage - 1) * postsPerPage;\r\n+    const currentPosts = posts.slice(offset, offset + postsPerPage);\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1697038431665,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,21 @@\n+import { allPosts, Post } from \"contentlayer/generated\";\r\n+\r\n+const posts: Post[] = allPosts.sort((a, b) => b.date.localeCompare(a.date));\r\n+\r\n+\r\n+const totalPosts = posts.length;\r\n+const postsPerPage = 2;\r\n+const totalPages = Math.ceil(totalPosts / postsPerPage);\r\n+\r\n+\r\n+\r\n+export const getPostsPagination = (page: number) => {\r\n+    const currentPage = parseInt(params.number);\r\n+    const offset = (currentPage - 1) * postsPerPage;\r\n+    const currentPosts = posts.slice(offset, offset + postsPerPage);\r\n+\r\n+    return {\r\n+        totalPages,\r\n+        currentPosts\r\n+    }\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1697038454790,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n \r\n \r\n \r\n export const getPostsPagination = (page: number) => {\r\n-    const currentPage = parseInt(params.number);\r\n+    const currentPage = parseInt(page);\r\n     const offset = (currentPage - 1) * postsPerPage;\r\n     const currentPosts = posts.slice(offset, offset + postsPerPage);\r\n \r\n     return {\r\n"
+                },
+                {
+                    "date": 1697038467227,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,21 @@\n+import { allPosts, Post } from \"contentlayer/generated\";\r\n+\r\n+const posts: Post[] = allPosts.sort((a, b) => b.date.localeCompare(a.date));\r\n+\r\n+\r\n+const totalPosts = posts.length;\r\n+const postsPerPage = 2;\r\n+const totalPages = Math.ceil(totalPosts / postsPerPage);\r\n+\r\n+\r\n+\r\n+export const getPostsPagination = (page: number) => {\r\n+    const currentPage = page);\r\n+    const offset = (currentPage - 1) * postsPerPage;\r\n+    const currentPosts = posts.slice(offset, offset + postsPerPage);\r\n+\r\n+    return {\r\n+        totalPages,\r\n+        currentPosts,\r\n+    };\r\n+};\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1697038481825,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,21 @@\n+import { allPosts, Post } from \"contentlayer/generated\";\r\n+\r\n+const posts: Post[] = allPosts.sort((a, b) => b.date.localeCompare(a.date));\r\n+\r\n+\r\n+const totalPosts = posts.length;\r\n+const postsPerPage = 2;\r\n+const totalPages = Math.ceil(totalPosts / postsPerPage);\r\n+\r\n+\r\n+\r\n+export const getPostsPagination = (currentPage: number) => {\r\n+    const currentPage = page;\r\n+    const offset = (currentPage - 1) * postsPerPage;\r\n+    const currentPosts = posts.slice(offset, offset + postsPerPage);\r\n+\r\n+    return {\r\n+        totalPages,\r\n+        currentPosts,\r\n+    };\r\n+};\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1697038652479,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,132 +9,11 @@\n \r\n \r\n \r\n export const getPostsPagination = (currentPage: number) => {\r\n-    const currentPage = page;\r\n     const offset = (currentPage - 1) * postsPerPage;\r\n     const currentPosts = posts.slice(offset, offset + postsPerPage);\r\n \r\n     return {\r\n-        totalPages,\r\n         currentPosts,\r\n     };\r\n-};\n-import { allPosts, Post } from \"contentlayer/generated\";\r\n-\r\n-const posts: Post[] = allPosts.sort((a, b) => b.date.localeCompare(a.date));\r\n-\r\n-\r\n-const totalPosts = posts.length;\r\n-const postsPerPage = 2;\r\n-const totalPages = Math.ceil(totalPosts / postsPerPage);\r\n-\r\n-\r\n-\r\n-export const getPostsPagination = (page: number) => {\r\n-    const currentPage = page);\r\n-    const offset = (currentPage - 1) * postsPerPage;\r\n-    const currentPosts = posts.slice(offset, offset + postsPerPage);\r\n-\r\n-    return {\r\n-        totalPages,\r\n-        currentPosts,\r\n-    };\r\n-};\n-import { allPosts, Post } from \"contentlayer/generated\";\r\n-\r\n-const posts: Post[] = allPosts.sort((a, b) => b.date.localeCompare(a.date));\r\n-\r\n-\r\n-const totalPosts = posts.length;\r\n-const postsPerPage = 2;\r\n-const totalPages = Math.ceil(totalPosts / postsPerPage);\r\n-\r\n-\r\n-\r\n-export const getPostsPagination = (page: number) => {\r\n-    const currentPage = parseInt(page);\r\n-    const offset = (currentPage - 1) * postsPerPage;\r\n-    const currentPosts = posts.slice(offset, offset + postsPerPage);\r\n-\r\n-    return {\r\n-        totalPages,\r\n-        currentPosts\r\n-    }\r\n-}\n-import { allPosts, Post } from \"contentlayer/generated\";\r\n-\r\n-const posts: Post[] = allPosts.sort((a, b) => b.date.localeCompare(a.date));\r\n-\r\n-\r\n-const totalPosts = posts.length;\r\n-const postsPerPage = 2;\r\n-const totalPages = Math.ceil(totalPosts / postsPerPage);\r\n-\r\n-\r\n-\r\n-export const getPostsPagination = (page: number) => {\r\n-    const currentPage = parseInt(params.number);\r\n-    const offset = (currentPage - 1) * postsPerPage;\r\n-    const currentPosts = posts.slice(offset, offset + postsPerPage);\r\n-}\n-import { allPosts, Post } from \"contentlayer/generated\";\r\n-\r\n-const posts: Post[] = allPosts.sort((a, b) => b.date.localeCompare(a.date));\r\n-\r\n-\r\n-const totalPosts = posts.length;\r\n-const postsPerPage = 2;\r\n-const totalPages = Math.ceil(totalPosts / postsPerPage);\r\n-\r\n-\r\n-\r\n-export const getPostsPagination = (page: number) => {\r\n-    const totalPosts = posts.length;\r\n-const postsPerPage = 2;\r\n-const totalPages = Math.ceil(totalPosts / postsPerPage);\r\n-}\n-import { allPosts, Post } from \"contentlayer/generated\";\r\n-\r\n-const posts: Post[] = allPosts.sort((a, b) => b.date.localeCompare(a.date));\r\n-\r\n-\r\n-const totalPosts = posts.length;\r\n-const postsPerPage = 2;\r\n-const totalPages = Math.ceil(totalPosts / postsPerPage);\r\n-\r\n-\r\n-\r\n-export const getPostsPagination = (page: number) => {\r\n-    \r\n-}\n-import { allPosts, Post } from \"contentlayer/generated\";\r\n-\r\n-const posts: Post[] = allPosts.sort((a, b) => b.date.localeCompare(a.date));\r\n-\r\n-\r\n-const totalPosts = posts.length;\r\n-\r\n-const postsPerPage = 2;\r\n-const totalPages = Math.ceil(totalPosts / postsPerPage);\r\n-\r\n-\r\n-\r\n-export const getPostsPagination = ()\n-import { allPosts, Post } from \"contentlayer/generated\";\r\n-const totalPosts = posts.length;\r\n-const postsPerPage = 2;\r\n-const totalPages = Math.ceil(totalPosts / postsPerPage);\r\n-\r\n-\r\n-\r\n-export const getPostsPagination = ()\n-const totalPosts = posts.length;\r\n-const postsPerPage = 2;\r\n-const totalPages = Math.ceil(totalPosts / postsPerPage);\r\n-\r\n-\r\n-\r\n-export const getPostsPagination = ()\n-const totalPosts = posts.length;\r\n-const postsPerPage = 2;\r\n-const totalPages = Math.ceil(totalPosts / postsPerPage);\n\\ No newline at end of file\n+};\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1697038699384,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n export const totalPages = Math.ceil(totalPosts / postsPerPage);\r\n \r\n \r\n \r\n-export const getPostsPagination = (currentPage: number) => {\r\n+export const getPostsPagination = (currentPage: number = 1) => {\r\n     const offset = (currentPage - 1) * postsPerPage;\r\n     const currentPosts = posts.slice(offset, offset + postsPerPage);\r\n \r\n     return {\r\n"
+                },
+                {
+                    "date": 1697039634544,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,20 @@\n+import { allPosts, Post } from \"contentlayer/generated\";\r\n+\r\n+const posts: Post[] = allPosts.sort((a, b) => b.date.localeCompare(a.date));\r\n+\r\n+\r\n+const totalPosts = posts.length;\r\n+const postsPerPage = 2;\r\n+export const totalPages = Math.ceil(totalPosts / postsPerPage);\r\n+\r\n+\r\n+\r\n+export const getPostsPagination = (currentPage: number = 1) => {\r\n+    \r\n+    const offset = (currentPage - 1) * postsPerPage;\r\n+    const currentPosts = posts.slice(offset, offset + postsPerPage);\r\n+\r\n+    return {\r\n+        currentPosts,\r\n+    };\r\n+};\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1697038310107,
+            "name": "Commit-0",
+            "content": "const totalPosts = posts.length;\r\nconst postsPerPage = 2;\r\nconst totalPages = Math.ceil(totalPosts / postsPerPage);"
+        }
+    ]
+}

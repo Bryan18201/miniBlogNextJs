@@ -1,0 +1,138 @@
+{
+    "sourceFile": "src/app/components/PostsLists.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 30,
+            "patches": [
+                {
+                    "date": 1697031403533,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1697031408841,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from 'react'\r\n \r\n const PostsLists = () => {\r\n   return (\r\n-    <div>PostsLists</div>\r\n+    ;:\r\n   )\r\n }\r\n \r\n export default PostsLists\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1697031414764,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,11 @@\n import React from 'react'\r\n \r\n const PostsLists = () => {\r\n   return (\r\n-    ;:\r\n+    <>\r\n+    \r\n+    </>\r\n   )\r\n }\r\n \r\n export default PostsLists\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1697031486308,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,16 @@\n import React from 'react'\r\n \r\n const PostsLists = () => {\r\n-  return (\r\n-    <>\r\n-    \r\n-    </>\r\n-  )\r\n+    return (\r\n+        <>\r\n+          {posts.map((post) => (\r\n+            <PostItem\r\n+              key={post._raw.flattenedPath}\r\n+              post={post}\r\n+            />\r\n+          ))}\r\n+        </>\r\n+      );\r\n }\r\n \r\n export default PostsLists\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1697031492229,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,16 @@\n+import React from 'react'\r\n+\r\n+const PostsLists = ({ posts }: Props) => {\r\n+    return (\r\n+        <>\r\n+          {posts.map((post) => (\r\n+            <PostItem\r\n+              key={post._raw.flattenedPath}\r\n+              post={post}\r\n+            />\r\n+          ))}\r\n+        </>\r\n+      );\r\n+}\r\n+\r\n+export default PostsLists\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1697031499913,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,11 @@\n-import React from 'react'\r\n+import { Post } from \"contentlayer/generated\";\r\n+import PostItem from \"./PostItem\";\r\n \r\n+interface Props {\r\n+    posts: Post[];\r\n+  }\r\n+  \r\n const PostsLists = ({ posts }: Props) => {\r\n     return (\r\n         <>\r\n           {posts.map((post) => (\r\n@@ -12,21 +17,5 @@\n         </>\r\n       );\r\n }\r\n \r\n-export default PostsLists\n-import React from 'react'\r\n-\r\n-const PostsLists = () => {\r\n-    return (\r\n-        <>\r\n-          {posts.map((post) => (\r\n-            <PostItem\r\n-              key={post._raw.flattenedPath}\r\n-              post={post}\r\n-            />\r\n-          ))}\r\n-        </>\r\n-      );\r\n-}\r\n-\r\n export default PostsLists\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1697031518360,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,5 @@\n import { Post } from \"contentlayer/generated\";\r\n-import PostItem from \"./PostItem\";\r\n \r\n interface Props {\r\n     posts: Post[];\r\n   }\r\n@@ -8,11 +7,9 @@\n const PostsLists = ({ posts }: Props) => {\r\n     return (\r\n         <>\r\n           {posts.map((post) => (\r\n-            <PostItem\r\n-              key={post._raw.flattenedPath}\r\n-              post={post}\r\n+            \r\n             />\r\n           ))}\r\n         </>\r\n       );\r\n"
+                },
+                {
+                    "date": 1697031526416,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n const PostsLists = ({ posts }: Props) => {\r\n     return (\r\n         <>\r\n           {posts.map((post) => (\r\n-            \r\n+        \r\n             />\r\n           ))}\r\n         </>\r\n       );\r\n"
+                },
+                {
+                    "date": 1697031532398,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,11 @@\n     return (\r\n         <>\r\n           {posts.map((post) => (\r\n         \r\n-            />\r\n+            <article>\r\n+                \r\n+            </article>\r\n           ))}\r\n         </>\r\n       );\r\n }\r\n"
+                },
+                {
+                    "date": 1697031539209,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n         <>\r\n           {posts.map((post) => (\r\n         \r\n             <article>\r\n-                \r\n+                <h2 className=\"\"></h2>\r\n             </article>\r\n           ))}\r\n         </>\r\n       );\r\n"
+                },
+                {
+                    "date": 1697031545716,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,11 @@\n         <>\r\n           {posts.map((post) => (\r\n         \r\n             <article>\r\n-                <h2 className=\"\"></h2>\r\n+                <h2 className=\"text-2xl\">\r\n+                    \r\n+                </h2>\r\n             </article>\r\n           ))}\r\n         </>\r\n       );\r\n"
+                },
+                {
+                    "date": 1697031554329,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n import { Post } from \"contentlayer/generated\";\r\n+import Link from \"next/link\";\r\n \r\n interface Props {\r\n     posts: Post[];\r\n   }\r\n@@ -10,9 +11,9 @@\n           {posts.map((post) => (\r\n         \r\n             <article>\r\n                 <h2 className=\"text-2xl\">\r\n-                    \r\n+                    <Link href={post.url}\r\n                 </h2>\r\n             </article>\r\n           ))}\r\n         </>\r\n"
+                },
+                {
+                    "date": 1697031560474,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,23 @@\n+import { Post } from \"contentlayer/generated\";\r\n+import Link from \"next/link\";\r\n+\r\n+interface Props {\r\n+    posts: Post[];\r\n+  }\r\n+  \r\n+const PostsLists = ({ posts }: Props) => {\r\n+    return (\r\n+        <>\r\n+          {posts.map((post) => (\r\n+        \r\n+            <article>\r\n+                <h2 className=\"text-2xl\">\r\n+                    <Link href={post.url}>{post.title}</Link>\r\n+                </h2>\r\n+            </article>\r\n+          ))}\r\n+        </>\r\n+      );\r\n+}\r\n+\r\n+export default PostsLists\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1697031565703,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,34 +13,14 @@\n             <article>\r\n                 <h2 className=\"text-2xl\">\r\n                     <Link href={post.url}>{post.title}</Link>\r\n                 </h2>\r\n+                <time>\r\n+                    \r\n+                </time>\r\n             </article>\r\n           ))}\r\n         </>\r\n       );\r\n }\r\n \r\n-export default PostsLists\n-import { Post } from \"contentlayer/generated\";\r\n-import Link from \"next/link\";\r\n-\r\n-interface Props {\r\n-    posts: Post[];\r\n-  }\r\n-  \r\n-const PostsLists = ({ posts }: Props) => {\r\n-    return (\r\n-        <>\r\n-          {posts.map((post) => (\r\n-        \r\n-            <article>\r\n-                <h2 className=\"text-2xl\">\r\n-                    <Link href={post.url}\r\n-                </h2>\r\n-            </article>\r\n-          ))}\r\n-        </>\r\n-      );\r\n-}\r\n-\r\n export default PostsLists\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1697031571673,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n                 <h2 className=\"text-2xl\">\r\n                     <Link href={post.url}>{post.title}</Link>\r\n                 </h2>\r\n                 <time>\r\n-                    \r\n+                    {new Date(post.)}\r\n                 </time>\r\n             </article>\r\n           ))}\r\n         </>\r\n"
+                },
+                {
+                    "date": 1697031577385,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n                 <h2 className=\"text-2xl\">\r\n                     <Link href={post.url}>{post.title}</Link>\r\n                 </h2>\r\n                 <time>\r\n-                    {new Date(post.)}\r\n+                    {new Date(post.date).tolo}\r\n                 </time>\r\n             </article>\r\n           ))}\r\n         </>\r\n"
+                },
+                {
+                    "date": 1697031587783,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,11 @@\n                 <h2 className=\"text-2xl\">\r\n                     <Link href={post.url}>{post.title}</Link>\r\n                 </h2>\r\n                 <time>\r\n-                    {new Date(post.date).tolo}\r\n+                    {new Date(post.date).toLocaleDateString(\"es-Es\".{\r\n+                        \r\n+                    })}\r\n                 </time>\r\n             </article>\r\n           ))}\r\n         </>\r\n"
+                },
+                {
+                    "date": 1697031605551,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,11 @@\n                     <Link href={post.url}>{post.title}</Link>\r\n                 </h2>\r\n                 <time>\r\n                     {new Date(post.date).toLocaleDateString(\"es-Es\".{\r\n-                        \r\n+                        year: \"numeric\",\r\n+                        month: \"long\",\r\n+                        day: \"numeric\",\r\n                     })}\r\n                 </time>\r\n             </article>\r\n           ))}\r\n"
+                },
+                {
+                    "date": 1697031610805,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n                 <h2 className=\"text-2xl\">\r\n                     <Link href={post.url}>{post.title}</Link>\r\n                 </h2>\r\n                 <time>\r\n-                    {new Date(post.date).toLocaleDateString(\"es-Es\".{\r\n+                    {new Date(post.date).toLocaleDateString(\"es-Es\",{\r\n                         year: \"numeric\",\r\n                         month: \"long\",\r\n                         day: \"numeric\",\r\n                     })}\r\n"
+                },
+                {
+                    "date": 1697031764736,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,18 @@\n+import { Post } from \"contentlayer/generated\";\r\n+import Link from \"next/link\";\r\n+\r\n+interface Props {\r\n+  posts: Post[];\r\n+}\r\n+\r\n+const PostsLists = ({ posts }: Props) => {\r\n+  return (\r\n+    <>\r\n+      {posts.map((post) => (\r\n+        \r\n+      ))}\r\n+    </>\r\n+  );\r\n+};\r\n+\r\n+export default PostsLists;\r\n"
+                },
+                {
+                    "date": 1697031878912,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n import { Post } from \"contentlayer/generated\";\r\n import Link from \"next/link\";\r\n+import PostItem from \"./PostItem\";\r\n \r\n interface Props {\r\n   posts: Post[];\r\n }\r\n@@ -8,41 +9,11 @@\n const PostsLists = ({ posts }: Props) => {\r\n   return (\r\n     <>\r\n       {posts.map((post) => (\r\n-        \r\n+        <PostItem\r\n       ))}\r\n     </>\r\n   );\r\n };\r\n \r\n export default PostsLists;\r\n-import { Post } from \"contentlayer/generated\";\r\n-import Link from \"next/link\";\r\n-\r\n-interface Props {\r\n-    posts: Post[];\r\n-  }\r\n-  \r\n-const PostsLists = ({ posts }: Props) => {\r\n-    return (\r\n-        <>\r\n-          {posts.map((post) => (\r\n-        \r\n-            <article>\r\n-                <h2 className=\"text-2xl\">\r\n-                    <Link href={post.url}>{post.title}</Link>\r\n-                </h2>\r\n-                <time>\r\n-                    {new Date(post.date).toLocaleDateString(\"es-Es\",{\r\n-                        year: \"numeric\",\r\n-                        month: \"long\",\r\n-                        day: \"numeric\",\r\n-                    })}\r\n-                </time>\r\n-            </article>\r\n-          ))}\r\n-        </>\r\n-      );\r\n-}\r\n-\r\n\\ No newline at end of file\n-export default PostsLists\n"
+                },
+                {
+                    "date": 1697031884016,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n const PostsLists = ({ posts }: Props) => {\r\n   return (\r\n     <>\r\n       {posts.map((post) => (\r\n-        <PostItem\r\n+        <PostItem key={post}\r\n       ))}\r\n     </>\r\n   );\r\n };\r\n"
+                },
+                {
+                    "date": 1697031890880,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n const PostsLists = ({ posts }: Props) => {\r\n   return (\r\n     <>\r\n       {posts.map((post) => (\r\n-        <PostItem key={post}\r\n+        <PostItem key={post} post\r\n       ))}\r\n     </>\r\n   );\r\n };\r\n"
+                },
+                {
+                    "date": 1697031913344,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n const PostsLists = ({ posts }: Props) => {\r\n   return (\r\n     <>\r\n       {posts.map((post) => (\r\n-        <PostItem key={post} post\r\n+        <PostItem key={post.} post\r\n       ))}\r\n     </>\r\n   );\r\n };\r\n"
+                },
+                {
+                    "date": 1697031922572,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n const PostsLists = ({ posts }: Props) => {\r\n   return (\r\n     <>\r\n       {posts.map((post) => (\r\n-        <PostItem key={post.} post\r\n+        <PostItem key={post._raw.flattenedPath} post\r\n       ))}\r\n     </>\r\n   );\r\n };\r\n"
+                },
+                {
+                    "date": 1697031929210,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,19 @@\n+import { Post } from \"contentlayer/generated\";\r\n+import Link from \"next/link\";\r\n+import PostItem from \"./PostItem\";\r\n+\r\n+interface Props {\r\n+  posts: Post[];\r\n+}\r\n+\r\n+const PostsLists = ({ posts }: Props) => {\r\n+  return (\r\n+    <>\r\n+      {posts.map((post) => (\r\n+        <PostItem key={post._raw.flattenedPath} post={post}\r\n+      ))}\r\n+    </>\r\n+  );\r\n+};\r\n+\r\n+export default PostsLists;\r\n"
+                },
+                {
+                    "date": 1697053669192,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,25 +1,6 @@\n import { Post } from \"contentlayer/generated\";\r\n-import Link from \"next/link\";\r\n-import PostItem from \"./PostItem\";\r\n \r\n-interface Props {\r\n-  posts: Post[];\r\n-}\r\n-\r\n-const PostsLists = ({ posts }: Props) => {\r\n-  return (\r\n-    <>\r\n-      {posts.map((post) => (\r\n-        <PostItem key={post._raw.flattenedPath} post={post}\r\n-      ))}\r\n-    </>\r\n-  );\r\n-};\r\n-\r\n-export default PostsLists;\r\n-import { Post } from \"contentlayer/generated\";\r\n-import Link from \"next/link\";\r\n import PostItem from \"./PostItem\";\r\n \r\n interface Props {\r\n   posts: Post[];\r\n@@ -28,9 +9,9 @@\n const PostsLists = ({ posts }: Props) => {\r\n   return (\r\n     <>\r\n       {posts.map((post) => (\r\n-        <PostItem key={post._raw.flattenedPath} post\r\n+        <PostItem key={post._raw.flattenedPath} post={post} />\r\n       ))}\r\n     </>\r\n   );\r\n };\r\n"
+                },
+                {
+                    "date": 1697054058762,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,5 @@\n import { Post } from \"contentlayer/generated\";\r\n-\r\n import PostItem from \"./PostItem\";\r\n \r\n interface Props {\r\n   posts: Post[];\r\n@@ -9,11 +8,13 @@\n const PostsLists = ({ posts }: Props) => {\r\n   return (\r\n     <>\r\n       {posts.map((post) => (\r\n-        <PostItem key={post._raw.flattenedPath} post={post} />\r\n+        <PostItem\r\n+          key={post._raw.flattenedPath}\r\n+          post={post}\r\n+        />\r\n       ))}\r\n     </>\r\n   );\r\n };\r\n-\r\n export default PostsLists;\r\n"
+                },
+                {
+                    "date": 1697054578308,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,20 @@\n+import { Post } from \"contentlayer/generated\";\r\n+import PostItem from \"./PostItem\";\r\n+\r\n+interface Props {\r\n+  posts: Post[];\r\n+}\r\n+\r\n+const PostsLists = ({ posts }: Props) => {\r\n+  return (\r\n+    <>\r\n+      {posts.map((post) => (\r\n+        <PostItem\r\n+          key={post._raw.flattenedPath}\r\n+          post={post}\r\n+        />\r\n+      ))}\r\n+    </>\r\n+  );\r\n+};\r\n+export default PostsLists;\r\n"
+                },
+                {
+                    "date": 1697054666372,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,20 @@\n+import { Post } from \"contentlayer/generated\";\r\n+import PostItem from \"./PostItem\";\r\n+\r\n+interface Props {\r\n+  posts?: Post[];\r\n+}\r\n+\r\n+const PostsLists = ({ posts }: Props) => {\r\n+  return (\r\n+    <>\r\n+      {posts.map((post) => (\r\n+        <PostItem\r\n+          key={post._raw.flattenedPath}\r\n+          post={post}\r\n+        />\r\n+      ))}\r\n+    </>\r\n+  );\r\n+};\r\n+export default PostsLists;\r\n"
+                },
+                {
+                    "date": 1697054671799,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n \r\n const PostsLists = ({ posts }: Props) => {\r\n   return (\r\n     <>\r\n-      {posts.map((post) => (\r\n+      {posts?.map((post) => (\r\n         <PostItem\r\n           key={post._raw.flattenedPath}\r\n           post={post}\r\n         />\r\n@@ -17,44 +17,4 @@\n     </>\r\n   );\r\n };\r\n export default PostsLists;\r\n-import { Post } from \"contentlayer/generated\";\r\n-import PostItem from \"./PostItem\";\r\n-\r\n-interface Props {\r\n-  posts: Post[];\r\n-}\r\n-\r\n-const PostsLists = ({ posts }: Props) => {\r\n-  return (\r\n-    <>\r\n-      {posts.map((post) => (\r\n-        <PostItem\r\n-          key={post._raw.flattenedPath}\r\n-          post={post}\r\n-        />\r\n-      ))}\r\n-    </>\r\n-  );\r\n-};\r\n-export default PostsLists;\r\n-import { Post } from \"contentlayer/generated\";\r\n-import PostItem from \"./PostItem\";\r\n-\r\n-interface Props {\r\n-  posts: Post[];\r\n-}\r\n-\r\n-const PostsLists = ({ posts }: Props) => {\r\n-  return (\r\n-    <>\r\n-      {posts.map((post) => (\r\n-        <PostItem\r\n-          key={post._raw.flattenedPath}\r\n-          post={post}\r\n-        />\r\n-      ))}\r\n-    </>\r\n-  );\r\n-};\r\n-export default PostsLists;\r\n"
+                }
+            ],
+            "date": 1697031403533,
+            "name": "Commit-0",
+            "content": "import React from 'react'\r\n\r\nconst PostsLists = () => {\r\n  return (\r\n    <div>PostsLists</div>\r\n  )\r\n}\r\n\r\nexport default PostsLists"
+        }
+    ]
+}

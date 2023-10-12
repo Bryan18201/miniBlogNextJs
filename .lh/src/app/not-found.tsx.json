@@ -1,0 +1,62 @@
+{
+    "sourceFile": "src/app/not-found.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 11,
+            "patches": [
+                {
+                    "date": 1696961115924,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1696961138082,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from 'react'\r\n \r\n-const not-found = () => {\r\n+const notFound = () => {\r\n   return (\r\n-    <div>not-found</div>\r\n+    <div>notFound</div>\r\n   )\r\n }\r\n\\ No newline at end of file\n \r\n-export default not-found\n+export default notfound\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1696961143256,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,5 +5,5 @@\n     <div>notFound</div>\r\n   )\r\n }\r\n \r\n-export default notfound\n\\ No newline at end of file\n+export default notFound\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1696961150742,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,11 @@\n import React from 'react'\r\n \r\n const notFound = () => {\r\n   return (\r\n-    <div>notFound</div>\r\n+    <div>\r\n+        <h1></h1>\r\n+    </div>\r\n   )\r\n }\r\n \r\n export default notFound\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1696961156073,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,12 @@\n+import React from 'react'\r\n+\r\n+const notFound = () => {\r\n+  return (\r\n+    <div>\r\n+        <h1>404</h1>\r\n+        <Link></Link>\r\n+    </div>\r\n+  )\r\n+}\r\n+\r\n+export default notFound\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1696961161188,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,12 @@\n+import React from 'react'\r\n+\r\n+const notFound = () => {\r\n+  return (\r\n+    <div>\r\n+        <h1>404</h1>\r\n+        <Link href=\"/\"></Link>\r\n+    </div>\r\n+  )\r\n+}\r\n+\r\n+export default notFound\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1696961168384,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,5 @@\n+import Link from 'next/link'\r\n import React from 'react'\r\n \r\n const notFound = () => {\r\n   return (\r\n@@ -8,28 +9,5 @@\n     </div>\r\n   )\r\n }\r\n \r\n-export default notFound\n-import React from 'react'\r\n-\r\n-const notFound = () => {\r\n-  return (\r\n-    <div>\r\n-        <h1>404</h1>\r\n-        <Link></Link>\r\n-    </div>\r\n-  )\r\n-}\r\n-\r\n-export default notFound\n-import React from 'react'\r\n-\r\n-const notFound = () => {\r\n-  return (\r\n-    <div>\r\n-        <h1></h1>\r\n-    </div>\r\n-  )\r\n-}\r\n-\r\n export default notFound\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1696961174729,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,13 @@\n+import Link from 'next/link'\r\n+import React from 'react'\r\n+\r\n+const notFound = () => {\r\n+  return (\r\n+    <div>\r\n+        <h1>404</h1>\r\n+        <Link href=\"/\">Volver al incio</Link>\r\n+    </div>\r\n+  )\r\n+}\r\n+\r\n+export default notFound\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1696961183131,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,23 +4,10 @@\n const notFound = () => {\r\n   return (\r\n     <div>\r\n         <h1>404</h1>\r\n-        <Link href=\"/\">Volver al incio</Link>\r\n+        <Link href=\"/\" className='bg-black text-white'>Volver al incio</Link>\r\n     </div>\r\n   )\r\n }\r\n \r\n-export default notFound\n-import Link from 'next/link'\r\n-import React from 'react'\r\n-\r\n-const notFound = () => {\r\n-  return (\r\n-    <div>\r\n-        <h1>404</h1>\r\n-        <Link href=\"/\"></Link>\r\n-    </div>\r\n-  )\r\n-}\r\n-\r\n export default notFound\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1696961193340,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n const notFound = () => {\r\n   return (\r\n     <div>\r\n         <h1>404</h1>\r\n-        <Link href=\"/\" className='bg-black text-white'>Volver al incio</Link>\r\n+        <Link href=\"/\" className='bg-black text-white px-4 py-2 hover:bg-slate-700'>Volver al incio</Link>\r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1696961256004,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,13 +2,9 @@\n import React from \"react\";\r\n \r\n const notFound = () => {\r\n   return (\r\n-    <div class name {\r\n-        constructor(parameters) {\r\n-            \r\n-        }\r\n-    }>\r\n+    <div class>\r\n       <h1>404</h1>\r\n       <Link\r\n         href=\"/\"\r\n         className=\"bg-black text-white px-4 py-2 hover:bg-slate-700\"\r\n"
+                },
+                {
+                    "date": 1696961264096,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,18 @@\n+import Link from \"next/link\";\r\n+import React from \"react\";\r\n+\r\n+const notFound = () => {\r\n+  return (\r\n+    <div className=\"grid gap\">\r\n+      <h1>404</h1>\r\n+      <Link\r\n+        href=\"/\"\r\n+        className=\"bg-black text-white px-4 py-2 hover:bg-slate-700\"\r\n+      >\r\n+        Volver al incio\r\n+      </Link>\r\n+    </div>\r\n+  );\r\n+};\r\n+\r\n+export default notFound;\r\n"
+                }
+            ],
+            "date": 1696961115924,
+            "name": "Commit-0",
+            "content": "import React from 'react'\r\n\r\nconst not-found = () => {\r\n  return (\r\n    <div>not-found</div>\r\n  )\r\n}\r\n\r\nexport default not-found"
+        }
+    ]
+}

@@ -1,0 +1,206 @@
+{
+    "sourceFile": "src/app/components/PostPagination.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 47,
+            "patches": [
+                {
+                    "date": 1697035630186,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1697035647866,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,8 @@\n-import React from 'react'\r\n \r\n const PostPagination = () => {\r\n   return (\r\n-    <div>PostPagination</div>\r\n+    \r\n   )\r\n }\r\n \r\n export default PostPagination\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1697035654731,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,10 @@\n \r\n const PostPagination = () => {\r\n   return (\r\n-    \r\n+    <div className=\"flex\">\r\n+\r\n+    </div>\r\n   )\r\n }\r\n \r\n export default PostPagination\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1697035662421,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,11 @@\n \r\n const PostPagination = () => {\r\n   return (\r\n     <div className=\"flex\">\r\n-\r\n+        <button>\r\n+            \r\n+        </button>\r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1697035669736,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,9 @@\n \r\n const PostPagination = () => {\r\n   return (\r\n     <div className=\"flex\">\r\n-        <button>\r\n-            \r\n-        </button>\r\n+        <button>Prev</button>\r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1697035677892,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,12 @@\n+\r\n+const PostPagination = () => {\r\n+  return (\r\n+    <div className=\"flex\">\r\n+        <button>Prev</button>\r\n+        <button>1</button>\r\n+        <button>Next</button>\r\n+    </div>\r\n+  )\r\n+}\r\n+\r\n+export default PostPagination\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1697035685316,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,20 +3,11 @@\n   return (\r\n     <div className=\"flex\">\r\n         <button>Prev</button>\r\n         <button>1</button>\r\n+        <button>2</button>\r\n         <button>Next</button>\r\n     </div>\r\n   )\r\n }\r\n \r\n-export default PostPagination\n-\r\n-const PostPagination = () => {\r\n-  return (\r\n-    <div className=\"flex\">\r\n-        <button>Prev</button>\r\n-    </div>\r\n-  )\r\n-}\r\n-\r\n export default PostPagination\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1697035754641,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,12 @@\n \r\n-const PostPagination = () => {\r\n+const PostPagination = ({totalPages, currentPage = 1}) => {\r\n   return (\r\n     <div className=\"flex\">\r\n         <button>Prev</button>\r\n         <button>1</button>\r\n         <button>2</button>\r\n+        <button>3</button>\r\n         <button>Next</button>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1697035761259,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,18 @@\n+interface Props{\r\n+    total\r\n+}\r\n+\r\n+\r\n+const PostPagination = ({totalPages, currentPage = 1}) => {\r\n+  return (\r\n+    <div className=\"flex\">\r\n+        <button>Prev</button>\r\n+        <button>1</button>\r\n+        <button>2</button>\r\n+        <button>3</button>\r\n+        <button>Next</button>\r\n+    </div>\r\n+  )\r\n+}\r\n+\r\n+export default PostPagination\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1697035766690,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n interface Props{\r\n-    total\r\n+    totalPages: number;\r\n+    \r\n }\r\n \r\n \r\n const PostPagination = ({totalPages, currentPage = 1}) => {\r\n@@ -14,19 +15,5 @@\n     </div>\r\n   )\r\n }\r\n \r\n-export default PostPagination\n-\r\n-const PostPagination = ({totalPages, currentPage = 1}) => {\r\n-  return (\r\n-    <div className=\"flex\">\r\n-        <button>Prev</button>\r\n-        <button>1</button>\r\n-        <button>2</button>\r\n-        <button>3</button>\r\n-        <button>Next</button>\r\n-    </div>\r\n-  )\r\n-}\r\n-\r\n export default PostPagination\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1697035775187,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,18 @@\n+interface Props {\r\n+  totalPages: number;\r\n+  currentPage?: number;\r\n+}\r\n+\r\n+const PostPagination = ({ totalPages, currentPage = 1 }) => {\r\n+  return (\r\n+    <div className=\"flex\">\r\n+      <button>Prev</button>\r\n+      <button>1</button>\r\n+      <button>2</button>\r\n+      <button>3</button>\r\n+      <button>Next</button>\r\n+    </div>\r\n+  );\r\n+};\r\n+\r\n+export default PostPagination;\r\n"
+                },
+                {
+                    "date": 1697035795704,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,32 +6,11 @@\n const PostPagination = ({ totalPages, currentPage = 1 }) => {\r\n   return (\r\n     <div className=\"flex\">\r\n       <button>Prev</button>\r\n-      <button>1</button>\r\n-      <button>2</button>\r\n-      <button>3</button>\r\n+      {}\r\n       <button>Next</button>\r\n     </div>\r\n   );\r\n };\r\n \r\n export default PostPagination;\r\n-interface Props{\r\n-    totalPages: number;\r\n-    \r\n-}\r\n-\r\n-\r\n-const PostPagination = ({totalPages, currentPage = 1}) => {\r\n-  return (\r\n-    <div className=\"flex\">\r\n-        <button>Prev</button>\r\n-        <button>1</button>\r\n-        <button>2</button>\r\n-        <button>3</button>\r\n-        <button>Next</button>\r\n-    </div>\r\n-  )\r\n-}\r\n-\r\n\\ No newline at end of file\n-export default PostPagination\n"
+                },
+                {
+                    "date": 1697035806431,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,18 @@\n+interface Props {\r\n+  totalPages: number;\r\n+  currentPage?: number;\r\n+}\r\n+\r\n+const PostPagination = ({ totalPages, currentPage = 1 }) => {\r\n+  return (\r\n+    <div className=\"flex\">\r\n+      <button>Prev</button>\r\n+      {\r\n+        Array.from({length: totalPages})\r\n+      }\r\n+      <button>Next</button>\r\n+    </div>\r\n+  );\r\n+};\r\n+\r\n+export default PostPagination;\r\n"
+                },
+                {
+                    "date": 1697035817387,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,28 +7,12 @@\n   return (\r\n     <div className=\"flex\">\r\n       <button>Prev</button>\r\n       {\r\n-        Array.from({length: totalPages})\r\n+        Array.from({length: totalPages}).map((_))\r\n       }\r\n       <button>Next</button>\r\n     </div>\r\n   );\r\n };\r\n \r\n export default PostPagination;\r\n-interface Props {\r\n-  totalPages: number;\r\n-  currentPage?: number;\r\n-}\r\n-\r\n-const PostPagination = ({ totalPages, currentPage = 1 }) => {\r\n-  return (\r\n-    <div className=\"flex\">\r\n-      <button>Prev</button>\r\n-      {}\r\n-      <button>Next</button>\r\n-    </div>\r\n-  );\r\n-};\r\n-\r\n-export default PostPagination;\r\n"
+                },
+                {
+                    "date": 1697035823912,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,11 @@\n   return (\r\n     <div className=\"flex\">\r\n       <button>Prev</button>\r\n       {\r\n-        Array.from({length: totalPages}).map((_))\r\n+        Array.from({length: totalPages}).map((_, index)=> {\r\n+            \r\n+        })\r\n       }\r\n       <button>Next</button>\r\n     </div>\r\n   );\r\n"
+                },
+                {
+                    "date": 1697035833929,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,11 +7,9 @@\n   return (\r\n     <div className=\"flex\">\r\n       <button>Prev</button>\r\n       {\r\n-        Array.from({length: totalPages}).map((_, index)=> {\r\n-            \r\n-        })\r\n+        Array.from({length: totalPages}).map((_, index)=> })\r\n       }\r\n       <button>Next</button>\r\n     </div>\r\n   );\r\n"
+                },
+                {
+                    "date": 1697035854525,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,11 @@\n   return (\r\n     <div className=\"flex\">\r\n       <button>Prev</button>\r\n       {\r\n-        Array.from({length: totalPages}).map((_, index)=> })\r\n+        Array.from({length: totalPages}).map((_, index)=> (\r\n+            <button></button>\r\n+        ))\r\n       }\r\n       <button>Next</button>\r\n     </div>\r\n   );\r\n"
+                },
+                {
+                    "date": 1697035859876,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n     <div className=\"flex\">\r\n       <button>Prev</button>\r\n       {\r\n         Array.from({length: totalPages}).map((_, index)=> (\r\n-            <button></button>\r\n+            <button key={index}></button>\r\n         ))\r\n       }\r\n       <button>Next</button>\r\n     </div>\r\n"
+                },
+                {
+                    "date": 1697035866936,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n     <div className=\"flex\">\r\n       <button>Prev</button>\r\n       {\r\n         Array.from({length: totalPages}).map((_, index)=> (\r\n-            <button key={index}></button>\r\n+            <button key={index}>{index + 1}</button>\r\n         ))\r\n       }\r\n       <button>Next</button>\r\n     </div>\r\n"
+                },
+                {
+                    "date": 1697035894371,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,20 @@\n+interface Props {\r\n+  totalPages: number;\r\n+  currentPage?: number;\r\n+}\r\n+\r\n+const PostPagination = ({ totalPages, currentPage = 1 }: Props) => {\r\n+  return (\r\n+    <div className=\"flex\">\r\n+      <button>Prev</button>\r\n+      {\r\n+        Array.from({length: totalPages}).map((_, index)=> (\r\n+            <button key={index}>{index + 1}</button>\r\n+        ))\r\n+      }\r\n+      <button>Next</button>\r\n+    </div>\r\n+  );\r\n+};\r\n+\r\n+export default PostPagination;\r\n"
+                },
+                {
+                    "date": 1697037059080,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n }\r\n \r\n const PostPagination = ({ totalPages, currentPage = 1 }: Props) => {\r\n   return (\r\n-    <div className=\"flex\">\r\n+    <div className=\"flex gap-4\">\r\n       <button>Prev</button>\r\n       {\r\n         Array.from({length: totalPages}).map((_, index)=> (\r\n             <button key={index}>{index + 1}</button>\r\n@@ -17,24 +17,4 @@\n   );\r\n };\r\n \r\n export default PostPagination;\r\n-interface Props {\r\n-  totalPages: number;\r\n-  currentPage?: number;\r\n-}\r\n-\r\n-const PostPagination = ({ totalPages, currentPage = 1 }) => {\r\n-  return (\r\n-    <div className=\"flex\">\r\n-      <button>Prev</button>\r\n-      {\r\n-        Array.from({length: totalPages}).map((_, index)=> (\r\n-            <button key={index}>{index + 1}</button>\r\n-        ))\r\n-      }\r\n-      <button>Next</button>\r\n-    </div>\r\n-  );\r\n-};\r\n-\r\n-export default PostPagination;\r\n"
+                },
+                {
+                    "date": 1697037099137,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n     <div className=\"flex gap-4\">\r\n       <button>Prev</button>\r\n       {\r\n         Array.from({length: totalPages}).map((_, index)=> (\r\n-            <button key={index}>{index + 1}</button>\r\n+            <Link key={index}>{index + 1}</button>\r\n         ))\r\n       }\r\n       <button>Next</button>\r\n     </div>\r\n"
+                },
+                {
+                    "date": 1697037106518,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n     <div className=\"flex gap-4\">\r\n       <button>Prev</button>\r\n       {\r\n         Array.from({length: totalPages}).map((_, index)=> (\r\n-            <Link key={index}>{index + 1}</button>\r\n+            <Link key={index}>{index + 1}</Link>\r\n         ))\r\n       }\r\n       <button>Next</button>\r\n     </div>\r\n"
+                },
+                {
+                    "date": 1697037127476,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,6 @@\n+import Link from \"next/link\";\r\n+\r\n interface Props {\r\n   totalPages: number;\r\n   currentPage?: number;\r\n }\r\n@@ -8,9 +10,9 @@\n     <div className=\"flex gap-4\">\r\n       <button>Prev</button>\r\n       {\r\n         Array.from({length: totalPages}).map((_, index)=> (\r\n-            <Link key={index}>{index + 1}</Link>\r\n+            <Link key={'/page'}>{index + 1}</Link>\r\n         ))\r\n       }\r\n       <button>Next</button>\r\n     </div>\r\n"
+                },
+                {
+                    "date": 1697037137058,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n     <div className=\"flex gap-4\">\r\n       <button>Prev</button>\r\n       {\r\n         Array.from({length: totalPages}).map((_, index)=> (\r\n-            <Link key={'/page'}>{index + 1}</Link>\r\n+            <Link key={`/page${}'}>{index + 1}</Link>\r\n         ))\r\n       }\r\n       <button>Next</button>\r\n     </div>\r\n"
+                },
+                {
+                    "date": 1697037147864,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n     <div className=\"flex gap-4\">\r\n       <button>Prev</button>\r\n       {\r\n         Array.from({length: totalPages}).map((_, index)=> (\r\n-            <Link key={`/page${}'}>{index + 1}</Link>\r\n+            <Link key={`/page${index}`}>{index + 1}</Link>\r\n         ))\r\n       }\r\n       <button>Next</button>\r\n     </div>\r\n"
+                },
+                {
+                    "date": 1697037152977,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n     <div className=\"flex gap-4\">\r\n       <button>Prev</button>\r\n       {\r\n         Array.from({length: totalPages}).map((_, index)=> (\r\n-            <Link key={`/page${index}`}>{index + 1}</Link>\r\n+            <Link key={`/page${index + 1}`}>{index + 1}</Link>\r\n         ))\r\n       }\r\n       <button>Next</button>\r\n     </div>\r\n"
+                },
+                {
+                    "date": 1697037158438,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n     <div className=\"flex gap-4\">\r\n       <button>Prev</button>\r\n       {\r\n         Array.from({length: totalPages}).map((_, index)=> (\r\n-            <Link key={`/page${index + 1}`}>{index + 1}</Link>\r\n+            <Link key={`/page${index + 1}`}></Link>\r\n         ))\r\n       }\r\n       <button>Next</button>\r\n     </div>\r\n"
+                },
+                {
+                    "date": 1697037169819,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n     <div className=\"flex gap-4\">\r\n       <button>Prev</button>\r\n       {\r\n         Array.from({length: totalPages}).map((_, index)=> (\r\n-            <Link key={`/page${index + 1}`}></Link>\r\n+            <Link href={`/page${index + 1}`}></Link>\r\n         ))\r\n       }\r\n       <button>Next</button>\r\n     </div>\r\n"
+                },
+                {
+                    "date": 1697037174978,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,10 @@\n     <div className=\"flex gap-4\">\r\n       <button>Prev</button>\r\n       {\r\n         Array.from({length: totalPages}).map((_, index)=> (\r\n-            <Link href={`/page${index + 1}`}></Link>\r\n+            <Link href={`/page${index + 1}`}\r\n+            ></Link>\r\n         ))\r\n       }\r\n       <button>Next</button>\r\n     </div>\r\n"
+                },
+                {
+                    "date": 1697037180413,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,14 +8,11 @@\n const PostPagination = ({ totalPages, currentPage = 1 }: Props) => {\r\n   return (\r\n     <div className=\"flex gap-4\">\r\n       <button>Prev</button>\r\n-      {\r\n-        Array.from({length: totalPages}).map((_, index)=> (\r\n-            <Link href={`/page${index + 1}`}\r\n-            ></Link>\r\n-        ))\r\n-      }\r\n+      {Array.from({ length: totalPages }).map((_, index) => (\r\n+        <Link href={`/page${index + 1}`} key={index}></Link>\r\n+      ))}\r\n       <button>Next</button>\r\n     </div>\r\n   );\r\n };\r\n"
+                },
+                {
+                    "date": 1697037193833,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,11 @@\n   return (\r\n     <div className=\"flex gap-4\">\r\n       <button>Prev</button>\r\n       {Array.from({ length: totalPages }).map((_, index) => (\r\n-        <Link href={`/page${index + 1}`} key={index}></Link>\r\n+        <Link href={`/page${index + 1}`} key={index}>\r\n+            \r\n+        </Link>\r\n       ))}\r\n       <button>Next</button>\r\n     </div>\r\n   );\r\n"
+                },
+                {
+                    "date": 1697037205634,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,10 +9,10 @@\n   return (\r\n     <div className=\"flex gap-4\">\r\n       <button>Prev</button>\r\n       {Array.from({ length: totalPages }).map((_, index) => (\r\n-        <Link href={`/page${index + 1}`} key={index}>\r\n-            \r\n+        <Link href={`/page/${index + 1}`} key={index}>\r\n+          {index + 1}\r\n         </Link>\r\n       ))}\r\n       <button>Next</button>\r\n     </div>\r\n"
+                },
+                {
+                    "date": 1697037268899,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n }\r\n \r\n const PostPagination = ({ totalPages, currentPage = 1 }: Props) => {\r\n   return (\r\n-    <div className=\"flex gap-4\">\r\n+    <Link className=\"flex gap-4\">\r\n       <button>Prev</button>\r\n       {Array.from({ length: totalPages }).map((_, index) => (\r\n         <Link href={`/page/${index + 1}`} key={index}>\r\n           {index + 1}\r\n"
+                },
+                {
+                    "date": 1697037276251,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,10 +6,10 @@\n }\r\n \r\n const PostPagination = ({ totalPages, currentPage = 1 }: Props) => {\r\n   return (\r\n-    <Link className=\"flex gap-4\">\r\n-      <button>Prev</button>\r\n+    <div className=\"flex gap-4\">\r\n+      <Link>Prev</Link>\r\n       {Array.from({ length: totalPages }).map((_, index) => (\r\n         <Link href={`/page/${index + 1}`} key={index}>\r\n           {index + 1}\r\n         </Link>\r\n"
+                },
+                {
+                    "date": 1697037287847,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n \r\n const PostPagination = ({ totalPages, currentPage = 1 }: Props) => {\r\n   return (\r\n     <div className=\"flex gap-4\">\r\n-      <Link>Prev</Link>\r\n+      <Link href={`/page/${}`}>Prev</Link>\r\n       {Array.from({ length: totalPages }).map((_, index) => (\r\n         <Link href={`/page/${index + 1}`} key={index}>\r\n           {index + 1}\r\n         </Link>\r\n"
+                },
+                {
+                    "date": 1697037293380,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,22 @@\n+import Link from \"next/link\";\r\n+\r\n+interface Props {\r\n+  totalPages: number;\r\n+  currentPage?: number;\r\n+}\r\n+\r\n+const PostPagination = ({ totalPages, currentPage = 1 }: Props) => {\r\n+  return (\r\n+    <div className=\"flex gap-4\">\r\n+      <Link href={`/page/${currentPage}`}>Prev</Link>\r\n+      {Array.from({ length: totalPages }).map((_, index) => (\r\n+        <Link href={`/page/${index + 1}`} key={index}>\r\n+          {index + 1}\r\n+        </Link>\r\n+      ))}\r\n+      <button>Next</button>\r\n+    </div>\r\n+  );\r\n+};\r\n+\r\n+export default PostPagination;\r\n"
+                },
+                {
+                    "date": 1697037302482,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,38 +7,16 @@\n \r\n const PostPagination = ({ totalPages, currentPage = 1 }: Props) => {\r\n   return (\r\n     <div className=\"flex gap-4\">\r\n-      <Link href={`/page/${currentPage}`}>Prev</Link>\r\n+      <Link href={`/page/${currentPage - 1}`}>Prev</Link>\r\n       {Array.from({ length: totalPages }).map((_, index) => (\r\n         <Link href={`/page/${index + 1}`} key={index}>\r\n           {index + 1}\r\n         </Link>\r\n       ))}\r\n-      <button>Next</button>\r\n+      <Link href={`/page/${currentPage - 1}`}>Next</button>\r\n     </div>\r\n   );\r\n };\r\n \r\n export default PostPagination;\r\n-import Link from \"next/link\";\r\n-\r\n-interface Props {\r\n-  totalPages: number;\r\n-  currentPage?: number;\r\n-}\r\n-\r\n-const PostPagination = ({ totalPages, currentPage = 1 }: Props) => {\r\n-  return (\r\n-    <div className=\"flex gap-4\">\r\n-      <Link href={`/page/${}`}>Prev</Link>\r\n-      {Array.from({ length: totalPages }).map((_, index) => (\r\n-        <Link href={`/page/${index + 1}`} key={index}>\r\n-          {index + 1}\r\n-        </Link>\r\n-      ))}\r\n-      <button>Next</button>\r\n-    </div>\r\n-  );\r\n-};\r\n-\r\n-export default PostPagination;\r\n"
+                },
+                {
+                    "date": 1697037310405,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n         <Link href={`/page/${index + 1}`} key={index}>\r\n           {index + 1}\r\n         </Link>\r\n       ))}\r\n-      <Link href={`/page/${currentPage - 1}`}>Next</button>\r\n+      <Link href={`/page/${currentPage + 1}`}>Next</Link>\r\n     </div>\r\n   );\r\n };\r\n \r\n"
+                },
+                {
+                    "date": 1697037610285,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,23 @@\n+import Link from \"next/link\";\r\n+\r\n+interface Props {\r\n+  totalPages: number;\r\n+  currentPage?: number;\r\n+}\r\n+\r\n+const PostPagination = ({ totalPages, currentPage = 1 }: Props) => {\r\n+  return (\r\n+    <div className=\"flex gap-4\">\r\n+      <Link href={`/page/${currentPage - 1}`}>Prev</Link>\r\n+      {Array.from({ length: totalPages }).map((_, index) => (\r\n+        <Link href={`/page/${index + 1}`}\r\n+         key={index}>\r\n+          {index + 1}\r\n+        </Link>\r\n+      ))}\r\n+      <Link href={`/page/${currentPage + 1}`}>Next</Link>\r\n+    </div>\r\n+  );\r\n+};\r\n+\r\n+export default PostPagination;\r\n"
+                },
+                {
+                    "date": 1697037617744,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,10 @@\n     <div className=\"flex gap-4\">\r\n       <Link href={`/page/${currentPage - 1}`}>Prev</Link>\r\n       {Array.from({ length: totalPages }).map((_, index) => (\r\n         <Link href={`/page/${index + 1}`}\r\n-         key={index}>\r\n+         key={index}\r\n+         className={``}>\r\n           {index + 1}\r\n         </Link>\r\n       ))}\r\n       <Link href={`/page/${currentPage + 1}`}>Next</Link>\r\n@@ -20,26 +21,4 @@\n   );\r\n };\r\n \r\n export default PostPagination;\r\n-import Link from \"next/link\";\r\n-\r\n-interface Props {\r\n-  totalPages: number;\r\n-  currentPage?: number;\r\n-}\r\n-\r\n-const PostPagination = ({ totalPages, currentPage = 1 }: Props) => {\r\n-  return (\r\n-    <div className=\"flex gap-4\">\r\n-      <Link href={`/page/${currentPage - 1}`}>Prev</Link>\r\n-      {Array.from({ length: totalPages }).map((_, index) => (\r\n-        <Link href={`/page/${index + 1}`} key={index}>\r\n-          {index + 1}\r\n-        </Link>\r\n-      ))}\r\n-      <Link href={`/page/${currentPage + 1}`}>Next</Link>\r\n-    </div>\r\n-  );\r\n-};\r\n-\r\n-export default PostPagination;\r\n"
+                },
+                {
+                    "date": 1697037646303,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,12 @@\n       <Link href={`/page/${currentPage - 1}`}>Prev</Link>\r\n       {Array.from({ length: totalPages }).map((_, index) => (\r\n         <Link href={`/page/${index + 1}`}\r\n          key={index}\r\n-         className={``}>\r\n+         className={`${\r\n+            currentPage === index + 1\r\n+            ? \"text-gray-600 cursosr-not-allowed pointer-events-none\"\r\n+         }`}>\r\n           {index + 1}\r\n         </Link>\r\n       ))}\r\n       <Link href={`/page/${currentPage + 1}`}>Next</Link>\r\n"
+                },
+                {
+                    "date": 1697037655161,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,8 +14,9 @@\n          key={index}\r\n          className={`${\r\n             currentPage === index + 1\r\n             ? \"text-gray-600 cursosr-not-allowed pointer-events-none\"\r\n+            : \"text-blue-700\"\r\n          }`}>\r\n           {index + 1}\r\n         </Link>\r\n       ))}\r\n"
+                },
+                {
+                    "date": 1697037668781,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n         <Link href={`/page/${index + 1}`}\r\n          key={index}\r\n          className={`${\r\n             currentPage === index + 1\r\n-            ? \"text-gray-600 cursosr-not-allowed pointer-events-none\"\r\n+            ? \"text-gray-600  pointer-events-none\"\r\n             : \"text-blue-700\"\r\n          }`}>\r\n           {index + 1}\r\n         </Link>\r\n"
+                },
+                {
+                    "date": 1697037693642,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,14 @@\n          }`}>\r\n           {index + 1}\r\n         </Link>\r\n       ))}\r\n-      <Link href={`/page/${currentPage + 1}`}>Next</Link>\r\n+      <Link href={`/page/${currentPage + 1}`}\r\n+      className={`${\r\n+        currentPage === index + 1\r\n+        ? \"text-gray-600  pointer-events-none\"\r\n+        : \"text-blue-700\"\r\n+     }`}>Next</Link>\r\n     </div>\r\n   );\r\n };\r\n \r\n"
+                },
+                {
+                    "date": 1697037704483,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n         </Link>\r\n       ))}\r\n       <Link href={`/page/${currentPage + 1}`}\r\n       className={`${\r\n-        currentPage === index + 1\r\n+        currentPage === totalPages\r\n         ? \"text-gray-600  pointer-events-none\"\r\n         : \"text-blue-700\"\r\n      }`}>Next</Link>\r\n     </div>\r\n"
+                },
+                {
+                    "date": 1697037744858,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,14 @@\n \r\n const PostPagination = ({ totalPages, currentPage = 1 }: Props) => {\r\n   return (\r\n     <div className=\"flex gap-4\">\r\n-      <Link href={`/page/${currentPage - 1}`}>Prev</Link>\r\n+      <Link href={`/page/${currentPage - 1}`}\r\n+      className={`${\r\n+        currentPage === totalPages\r\n+        ? \"text-gray-600  pointer-events-none\"\r\n+        : \"text-blue-700\"\r\n+     }`}>Prev</Link>\r\n       {Array.from({ length: totalPages }).map((_, index) => (\r\n         <Link href={`/page/${index + 1}`}\r\n          key={index}\r\n          className={`${\r\n"
+                },
+                {
+                    "date": 1697037752133,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,31 +7,41 @@\n \r\n const PostPagination = ({ totalPages, currentPage = 1 }: Props) => {\r\n   return (\r\n     <div className=\"flex gap-4\">\r\n-      <Link href={`/page/${currentPage - 1}`}\r\n-      className={`${\r\n-        currentPage === totalPages\r\n-        ? \"text-gray-600  pointer-events-none\"\r\n-        : \"text-blue-700\"\r\n-     }`}>Prev</Link>\r\n+      <Link\r\n+        href={`/page/${currentPage - 1}`}\r\n+        className={`${\r\n+          currentPage === 1\r\n+            ? \"text-gray-600  pointer-events-none\"\r\n+            : \"text-blue-700\"\r\n+        }`}\r\n+      >\r\n+        Prev\r\n+      </Link>\r\n       {Array.from({ length: totalPages }).map((_, index) => (\r\n-        <Link href={`/page/${index + 1}`}\r\n-         key={index}\r\n-         className={`${\r\n+        <Link\r\n+          href={`/page/${index + 1}`}\r\n+          key={index}\r\n+          className={`${\r\n             currentPage === index + 1\r\n-            ? \"text-gray-600  pointer-events-none\"\r\n-            : \"text-blue-700\"\r\n-         }`}>\r\n+              ? \"text-gray-600  pointer-events-none\"\r\n+              : \"text-blue-700\"\r\n+          }`}\r\n+        >\r\n           {index + 1}\r\n         </Link>\r\n       ))}\r\n-      <Link href={`/page/${currentPage + 1}`}\r\n-      className={`${\r\n-        currentPage === totalPages\r\n-        ? \"text-gray-600  pointer-events-none\"\r\n-        : \"text-blue-700\"\r\n-     }`}>Next</Link>\r\n+      <Link\r\n+        href={`/page/${currentPage + 1}`}\r\n+        className={`${\r\n+          currentPage === totalPages\r\n+            ? \"text-gray-600  pointer-events-none\"\r\n+            : \"text-blue-700\"\r\n+        }`}\r\n+      >\r\n+        Next\r\n+      </Link>\r\n     </div>\r\n   );\r\n };\r\n \r\n"
+                }
+            ],
+            "date": 1697035630186,
+            "name": "Commit-0",
+            "content": "import React from 'react'\r\n\r\nconst PostPagination = () => {\r\n  return (\r\n    <div>PostPagination</div>\r\n  )\r\n}\r\n\r\nexport default PostPagination"
+        }
+    ]
+}

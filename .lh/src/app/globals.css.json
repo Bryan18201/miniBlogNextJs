@@ -1,0 +1,154 @@
+{
+    "sourceFile": "src/app/globals.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 34,
+            "patches": [
+                {
+                    "date": 1696950943733,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1696959578625,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,7 @@\n @tailwind base;\n @tailwind components;\n @tailwind utilities;\n \n+h2 {\n+    \n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1696959586637,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,6 +2,6 @@\n @tailwind components;\n @tailwind utilities;\n \n h2 {\n-    \n+    color: red;\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1696959597505,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,7 @@\n+@tailwind base;\n+@tailwind components;\n+@tailwind utilities;\n+\n+h2 {\n+    @apply\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1696959604042,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,13 +2,6 @@\n @tailwind components;\n @tailwind utilities;\n \n h2 {\n-    @apply\n-}\n-@tailwind base;\n-@tailwind components;\n-@tailwind utilities;\n-\n-h2 {\n-    color: red;\n+    @apply text-center\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1696959612003,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,6 +2,6 @@\n @tailwind components;\n @tailwind utilities;\n \n h2 {\n-    @apply text-center\n+    @apply text-center my-4 text-indigo\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1696959619884,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,6 +2,6 @@\n @tailwind components;\n @tailwind utilities;\n \n h2 {\n-    @apply text-center my-4 text-indigo\n-}\n\\ No newline at end of file\n+  @apply text-center my-4 text-indigo-500 text-2xl;\n+}\n"
+                },
+                {
+                    "date": 1696959628118,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,11 @@\n+@tailwind base;\n+@tailwind components;\n+@tailwind utilities;\n+\n+h2 {\n+  @apply text-center my-4 text-indigo-500 text-2xl;\n+}\n+\n+p{\n+    \n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1696959642554,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,13 +6,6 @@\n   @apply text-center my-4 text-indigo-500 text-2xl;\n }\n \n p{\n-    \n-}\n-@tailwind base;\n-@tailwind components;\n-@tailwind utilities;\n-\n-h2 {\n-  @apply text-center my-4 text-indigo-500 text-2xl;\n+    @apply \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1696959655384,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,6 +6,6 @@\n   @apply text-center my-4 text-indigo-500 text-2xl;\n }\n \n p{\n-    @apply \n+    @apply my-4 text-gray-800\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1697031969088,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,7 +5,8 @@\n h2 {\n   @apply text-center my-4 text-indigo-500 text-2xl;\n }\n \n-p{\n-    @apply my-4 text-gray-800\n-}\n\\ No newline at end of file\n+p {\n+  @apply my-4 text-gray-800;\n+}\n+\n"
+                },
+                {
+                    "date": 1697032642123,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,4 +9,23 @@\n p {\n   @apply my-4 text-gray-800;\n }\n \n+p {\n+  @apply mb-4;\n+}\n+\n+pre > code {\n+  @apply grid;\n+}\n+\n+pre {\n+  @apply p-4 rounded my-4 overflo;\n+}\n+\n+article pre code {\n+  @apply bg-transparent text-sm border-none;\n+}\n+\n+article code {\n+  @apply bg-gray-200 px-2 rounded text-sm border;\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1697032648029,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,31 @@\n+@tailwind base;\n+@tailwind components;\n+@tailwind utilities;\n+\n+h2 {\n+  @apply text-center my-4 text-indigo-500 text-2xl;\n+}\n+\n+p {\n+  @apply my-4 text-gray-800;\n+}\n+\n+p {\n+  @apply mb-4;\n+}\n+\n+pre > code {\n+  @apply grid;\n+}\n+\n+pre {\n+  @apply p-4 rounded my-4 overflow-x;\n+}\n+\n+article pre code {\n+  @apply bg-transparent text-sm border-none;\n+}\n+\n+article code {\n+  @apply bg-gray-200 px-2 rounded text-sm border;\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1697032673472,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,46 +12,17 @@\n \n p {\n   @apply mb-4;\n }\n-\n-pre > code {\n-  @apply grid;\n+code{\n+  \n }\n-\n-pre {\n-  @apply p-4 rounded my-4 overflow-x;\n-}\n-\n-article pre code {\n-  @apply bg-transparent text-sm border-none;\n-}\n-\n-article code {\n-  @apply bg-gray-200 px-2 rounded text-sm border;\n-}\n-@tailwind base;\n-@tailwind components;\n-@tailwind utilities;\n-\n-h2 {\n-  @apply text-center my-4 text-indigo-500 text-2xl;\n-}\n-\n-p {\n-  @apply my-4 text-gray-800;\n-}\n-\n-p {\n-  @apply mb-4;\n-}\n-\n pre > code {\n   @apply grid;\n }\n \n pre {\n-  @apply p-4 rounded my-4 overflo;\n+  @apply p-4 rounded my-4 overflow-x-scroll;\n }\n \n article pre code {\n   @apply bg-transparent text-sm border-none;\n"
+                },
+                {
+                    "date": 1697033039982,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,33 @@\n+@tailwind base;\n+@tailwind components;\n+@tailwind utilities;\n+\n+h2 {\n+  @apply text-center my-4 text-indigo-500 text-2xl;\n+}\n+\n+p {\n+  @apply my-4 text-gray-800;\n+}\n+\n+p {\n+  @apply mb-4;\n+}\n+code{\n+\n+}\n+pre > code {\n+  @apply grid;\n+}\n+\n+pre {\n+  @apply p-4 rounded my-4 overflow-x-scroll;\n+}\n+\n+article pre code {\n+  @apply bg-transparent text-sm border-none;\n+}\n+\n+/* article code {\n+  @apply bg-gray-200 px-2 rounded text-sm border;\n+} */\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1697033121939,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,31 @@\n+@tailwind base;\n+@tailwind components;\n+@tailwind utilities;\n+\n+h2 {\n+  @apply text-center my-4 text-indigo-500 text-2xl;\n+}\n+\n+p {\n+  @apply my-4 text-gray-800;\n+}\n+\n+p {\n+  @apply mb-4;\n+}\n+\n+pre > code {\n+  @apply grid;\n+}\n+\n+pre {\n+  @apply p-4 rounded my-4 overflow-x-scroll;\n+}\n+\n+article pre code {\n+  @apply bg-transparent text-sm border-none;\n+}\n+\n+/* article code {\n+  @apply bg-gray-200 px-2 rounded text-sm border;\n+} */\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1697033134494,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n   @apply text-center my-4 text-indigo-500 text-2xl;\n }\n \n p {\n-  @apply my-4 text-gray-800;\n+  @apply my-4 text-gray-800 mb-4;\n }\n \n p {\n   @apply mb-4;\n@@ -27,71 +27,5 @@\n }\n \n /* article code {\n   @apply bg-gray-200 px-2 rounded text-sm border;\n-} */\n-@tailwind base;\n-@tailwind components;\n-@tailwind utilities;\n-\n-h2 {\n-  @apply text-center my-4 text-indigo-500 text-2xl;\n-}\n-\n-p {\n-  @apply my-4 text-gray-800;\n-}\n-\n-p {\n-  @apply mb-4;\n-}\n-code{\n-\n-}\n-pre > code {\n-  @apply grid;\n-}\n-\n-pre {\n-  @apply p-4 rounded my-4 overflow-x-scroll;\n-}\n-\n-article pre code {\n-  @apply bg-transparent text-sm border-none;\n-}\n-\n-/* article code {\n-  @apply bg-gray-200 px-2 rounded text-sm border;\n-} */\n-@tailwind base;\n-@tailwind components;\n-@tailwind utilities;\n-\n-h2 {\n-  @apply text-center my-4 text-indigo-500 text-2xl;\n-}\n-\n-p {\n-  @apply my-4 text-gray-800;\n-}\n-\n-p {\n-  @apply mb-4;\n-}\n-code{\n-  \n-}\n-pre > code {\n-  @apply grid;\n-}\n-\n-pre {\n-  @apply p-4 rounded my-4 overflow-x-scroll;\n-}\n-\n-article pre code {\n-  @apply bg-transparent text-sm border-none;\n-}\n-\n-article code {\n-  @apply bg-gray-200 px-2 rounded text-sm border;\n-}\n\\ No newline at end of file\n+} */\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1697033140437,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,16 +5,16 @@\n h2 {\n   @apply text-center my-4 text-indigo-500 text-2xl;\n }\n \n+\n+\n p {\n   @apply my-4 text-gray-800 mb-4;\n }\n \n-p {\n-  @apply mb-4;\n-}\n \n+\n pre > code {\n   @apply grid;\n }\n \n"
+                },
+                {
+                    "date": 1697033159691,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,11 +4,13 @@\n \n h2 {\n   @apply text-center my-4 text-indigo-500 text-2xl;\n }\n+h3{\n+  @apply my-4 text-indigo-700 text-xl;\n+}\n \n \n-\n p {\n   @apply my-4 text-gray-800 mb-4;\n }\n \n"
+                },
+                {
+                    "date": 1697033170245,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,34 @@\n+@tailwind base;\n+@tailwind components;\n+@tailwind utilities;\n+\n+h2 {\n+  @apply text-center my-4 text-indigo-500 text-2xl;\n+}\n+h3{\n+  @apply my-4 text-indigo-700 text-xl;\n+}\n+\n+\n+p {\n+  @apply my-4 text-gray-800 mb-4;\n+}\n+\n+\n+\n+pre > code {\n+  @apply grid;\n+}\n+\n+pre {\n+  @apply p-4 rounded my-4 overflow-x-scroll;\n+}\n+\n+article pre code {\n+  @apply bg-transparent text-sm border-none;\n+}\n+\n+/* article code {\n+  @apply bg-gray-200 px-2 rounded text-sm border;\n+} */\n+\n"
+                },
+                {
+                    "date": 1697033181350,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,35 @@\n+@tailwind base;\n+@tailwind components;\n+@tailwind utilities;\n+\n+h2 {\n+  @apply text-center my-4 text-indigo-500 text-2xl;\n+}\n+h3{\n+  @apply my-4 text-indigo-700 text-xl;\n+}\n+\n+\n+p {\n+  @apply my-4 text-gray-800 mb-4;\n+}\n+\n+\n+\n+pre > code {\n+  @apply grid;\n+}\n+\n+pre {\n+  @apply p-4 rounded my-4 overflow-x-scroll;\n+}\n+\n+article pre code {\n+  @apply bg-transparent text-sm border-none;\n+}\n+\n+/* article code {\n+  @apply bg-gray-200 px-2 rounded text-sm border;\n+} */\n+\n+p, h1,h2,h3,h4,h5,h6\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1697033191455,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,72 +31,7 @@\n /* article code {\n   @apply bg-gray-200 px-2 rounded text-sm border;\n } */\n \n-p, h1,h2,h3,h4,h5,h6\n-@tailwind base;\n-@tailwind components;\n-@tailwind utilities;\n-\n-h2 {\n-  @apply text-center my-4 text-indigo-500 text-2xl;\n-}\n-h3{\n-  @apply my-4 text-indigo-700 text-xl;\n-}\n-\n-\n-p {\n-  @apply my-4 text-gray-800 mb-4;\n-}\n-\n-\n-\n-pre > code {\n-  @apply grid;\n-}\n-\n-pre {\n-  @apply p-4 rounded my-4 overflow-x-scroll;\n-}\n-\n-article pre code {\n-  @apply bg-transparent text-sm border-none;\n-}\n-\n-/* article code {\n-  @apply bg-gray-200 px-2 rounded text-sm border;\n-} */\n-\n-@tailwind base;\n-@tailwind components;\n-@tailwind utilities;\n-\n-h2 {\n-  @apply text-center my-4 text-indigo-500 text-2xl;\n-}\n-h3{\n-  @apply my-4 text-indigo-700 text-xl;\n-}\n-\n-\n-p {\n-  @apply my-4 text-gray-800 mb-4;\n-}\n-\n-\n-\n-pre > code {\n-  @apply grid;\n-}\n-\n-pre {\n-  @apply p-4 rounded my-4 overflow-x-scroll;\n-}\n-\n-article pre code {\n-  @apply bg-transparent text-sm border-none;\n-}\n-\n-/* article code {\n-  @apply bg-gray-200 px-2 rounded text-sm border;\n-} */\n\\ No newline at end of file\n+p, h1,h2,h3,h4,h5,h6 code{\n+  @apply bg-gray-200\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1697033200443,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,6 +32,6 @@\n   @apply bg-gray-200 px-2 rounded text-sm border;\n } */\n \n p, h1,h2,h3,h4,h5,h6 code{\n-  @apply bg-gray-200\n+  @apply bg-gray-200 px-2 rounded text-sm\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1697033206911,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,6 +32,6 @@\n   @apply bg-gray-200 px-2 rounded text-sm border;\n } */\n \n p, h1,h2,h3,h4,h5,h6 code{\n-  @apply bg-gray-200 px-2 rounded text-sm\n+  @apply bg-gray-200 px-2 rounded text-sm;\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1697033268794,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,7 +31,7 @@\n /* article code {\n   @apply bg-gray-200 px-2 rounded text-sm border;\n } */\n \n-p, h1,h2,h3,h4,h5,h6 code{\n+h3 >  code{\n   @apply bg-gray-200 px-2 rounded text-sm;\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1697033275091,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,7 +31,11 @@\n /* article code {\n   @apply bg-gray-200 px-2 rounded text-sm border;\n } */\n \n-h3 >  code{\n+h3 > code{\n   @apply bg-gray-200 px-2 rounded text-sm;\n+}\n+\n+h3 > code{\n+  @apply bg-gray-200 px-2 rounded text-sm;\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1697033283171,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n /* article code {\n   @apply bg-gray-200 px-2 rounded text-sm border;\n } */\n \n-h3 > code{\n+p> code, h3 > code{\n   @apply bg-gray-200 px-2 rounded text-sm;\n }\n \n h3 > code{\n"
+                },
+                {
+                    "date": 1697033290238,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,7 +35,4 @@\n p> code, h3 > code{\n   @apply bg-gray-200 px-2 rounded text-sm;\n }\n \n-h3 > code{\n-  @apply bg-gray-200 px-2 rounded text-sm;\n-}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1697033347736,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,36 @@\n+@tailwind base;\n+@tailwind components;\n+@tailwind utilities;\n+\n+h2 {\n+  @apply text-center my-4 text-indigo-500 text-2xl;\n+}\n+\n+\n+\n+p {\n+  @apply my-4 text-gray-800 mb-4;\n+}\n+\n+\n+\n+pre > code {\n+  @apply grid;\n+}\n+\n+pre {\n+  @apply p-4 rounded my-4 overflow-x-scroll;\n+}\n+\n+article pre code {\n+  @apply bg-transparent text-sm border-none;\n+}\n+\n+/* article code {\n+  @apply bg-gray-200 px-2 rounded text-sm border;\n+} */\n+\n+p> code, h3 > code{\n+  @apply bg-gray-200 px-2 rounded text-sm;\n+}\n+\n"
+                },
+                {
+                    "date": 1697033382410,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,35 @@\n+@tailwind base;\n+@tailwind components;\n+@tailwind utilities;\n+\n+h2 {\n+  @apply text-center my-4 text-indigo-500 text-2xl;\n+}\n+\n+\n+p {\n+  @apply my-4 text-gray-800 mb-4;\n+}\n+\n+\n+\n+pre > code {\n+  @apply grid;\n+}\n+\n+pre {\n+  @apply p-4 rounded my-4 overflow-x-scroll;\n+}\n+\n+article pre code {\n+  @apply bg-transparent text-sm border-none;\n+}\n+\n+/* article code {\n+  @apply bg-gray-200 px-2 rounded text-sm border;\n+} */\n+\n+p> code, h3 > code{\n+  @apply bg-gray-200 px-2 rounded text-sm;\n+}\n+\n"
+                },
+                {
+                    "date": 1697033387850,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n }\n \n \n p {\n-  @apply my-4 text-gray-800 mb-4;\n+  @apply my-4 text-gray-800;\n }\n \n \n \n@@ -32,78 +32,4 @@\n p> code, h3 > code{\n   @apply bg-gray-200 px-2 rounded text-sm;\n }\n \n-@tailwind base;\n-@tailwind components;\n-@tailwind utilities;\n-\n-h2 {\n-  @apply text-center my-4 text-indigo-500 text-2xl;\n-}\n-\n-\n-\n-p {\n-  @apply my-4 text-gray-800 mb-4;\n-}\n-\n-\n-\n-pre > code {\n-  @apply grid;\n-}\n-\n-pre {\n-  @apply p-4 rounded my-4 overflow-x-scroll;\n-}\n-\n-article pre code {\n-  @apply bg-transparent text-sm border-none;\n-}\n-\n-/* article code {\n-  @apply bg-gray-200 px-2 rounded text-sm border;\n-} */\n-\n-p> code, h3 > code{\n-  @apply bg-gray-200 px-2 rounded text-sm;\n-}\n-\n-@tailwind base;\n-@tailwind components;\n-@tailwind utilities;\n-\n-h2 {\n-  @apply text-center my-4 text-indigo-500 text-2xl;\n-}\n-h3{\n-  @apply my-4 text-indigo-700 text-xl;\n-}\n-\n-\n-p {\n-  @apply my-4 text-gray-800 mb-4;\n-}\n-\n-\n-\n-pre > code {\n-  @apply grid;\n-}\n-\n-pre {\n-  @apply p-4 rounded my-4 overflow-x-scroll;\n-}\n-\n-article pre code {\n-  @apply bg-transparent text-sm border-none;\n-}\n-\n-/* article code {\n-  @apply bg-gray-200 px-2 rounded text-sm border;\n-} */\n-\n-p> code, h3 > code{\n-  @apply bg-gray-200 px-2 rounded text-sm;\n-}\n-\n"
+                },
+                {
+                    "date": 1697033413673,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,11 @@\n h2 {\n   @apply text-center my-4 text-indigo-500 text-2xl;\n }\n \n+h3{\n+  @apply my-4 text-indigo-500 text-xl;\n+}\n \n p {\n   @apply my-4 text-gray-800;\n }\n"
+                },
+                {
+                    "date": 1697033421316,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n   @apply text-center my-4 text-indigo-500 text-2xl;\n }\n \n h3{\n-  @apply my-4 text-indigo-500 text-xl;\n+  @apply my-4 text-indigo-700 text-xl;\n }\n \n p {\n   @apply my-4 text-gray-800;\n"
+                },
+                {
+                    "date": 1697033821715,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n   @apply grid;\n }\n \n pre {\n-  @apply p-4 rounded my-4 overflow-x-scroll;\n+  @apply p-4 rounded my-4 overflow-x-auto;\n }\n \n article pre code {\n   @apply bg-transparent text-sm border-none;\n"
+                },
+                {
+                    "date": 1697034334019,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n @tailwind components;\n @tailwind utilities;\n \n h2 {\n-  @apply text-center my-4 text-indigo-500 text-2xl;\n+  @apply  my-4 text-indigo-500 text-2xl;\n }\n \n h3{\n   @apply my-4 text-indigo-700 text-xl;\n"
+                }
+            ],
+            "date": 1696950943733,
+            "name": "Commit-0",
+            "content": "@tailwind base;\n@tailwind components;\n@tailwind utilities;\n\n"
+        }
+    ]
+}

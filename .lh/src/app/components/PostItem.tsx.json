@@ -1,0 +1,86 @@
+{
+    "sourceFile": "src/app/components/PostItem.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 17,
+            "patches": [
+                {
+                    "date": 1697031776686,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1697031782984,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,11 @@\n import React from 'react'\r\n \r\n const PostItem = () => {\r\n   return (\r\n-    <div>PostItem</div>\r\n+   <>\r\n+   \r\n+   </>\r\n   )\r\n }\r\n \r\n export default PostItem\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1697031793890,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,20 @@\n import React from 'react'\r\n \r\n-const PostItem = () => {\r\n+const PostItem = ({posts}) => {\r\n   return (\r\n-   <>\r\n-   \r\n-   </>\r\n+    <article>\r\n+    <h2 className=\"text-2xl\">\r\n+      <Link href={post.url}>{post.title}</Link>\r\n+    </h2>\r\n+    <time>\r\n+      {new Date(post.date).toLocaleDateString(\"es-Es\", {\r\n+        year: \"numeric\",\r\n+        month: \"long\",\r\n+        day: \"numeric\",\r\n+      })}\r\n+    </time>\r\n+  </article>\r\n   )\r\n }\r\n \r\n export default PostItem\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1697031811041,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,10 @@\n import React from 'react'\r\n \r\n+interface Props {\r\n+    posts: Post[];\r\n+  }\r\n+  \r\n const PostItem = ({posts}) => {\r\n   return (\r\n     <article>\r\n     <h2 className=\"text-2xl\">\r\n"
+                },
+                {
+                    "date": 1697031818091,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,10 +2,10 @@\n \r\n interface Props {\r\n     posts: Post[];\r\n   }\r\n-  \r\n-const PostItem = ({posts}) => {\r\n+\r\n+const PostItem = ({posts}: Props) => {\r\n   return (\r\n     <article>\r\n     <h2 className=\"text-2xl\">\r\n       <Link href={post.url}>{post.title}</Link>\r\n"
+                },
+                {
+                    "date": 1697031826453,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import React from 'react'\r\n \r\n interface Props {\r\n-    posts: Post[];\r\n+    post: Post[];\r\n   }\r\n \r\n const PostItem = ({posts}: Props) => {\r\n   return (\r\n"
+                },
+                {
+                    "date": 1697031837413,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n+import { Post } from 'contentlayer/generated';\r\n import React from 'react'\r\n \r\n interface Props {\r\n-    post: Post[];\r\n+    post: Post;\r\n   }\r\n \r\n const PostItem = ({posts}: Props) => {\r\n   return (\r\n"
+                },
+                {
+                    "date": 1697031850430,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n import { Post } from 'contentlayer/generated';\r\n+import Link from 'next/link';\r\n import React from 'react'\r\n \r\n interface Props {\r\n     post: Post;\r\n@@ -8,9 +9,9 @@\n const PostItem = ({posts}: Props) => {\r\n   return (\r\n     <article>\r\n     <h2 className=\"text-2xl\">\r\n-      <Link href={post.url}>{post.title}</Link>\r\n+      <Linkk href={post.url}>{post.title}</Link>\r\n     </h2>\r\n     <time>\r\n       {new Date(post.date).toLocaleDateString(\"es-Es\", {\r\n         year: \"numeric\",\r\n"
+                },
+                {
+                    "date": 1697031857492,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,13 +5,13 @@\n interface Props {\r\n     post: Post;\r\n   }\r\n \r\n-const PostItem = ({posts}: Props) => {\r\n+const PostItem = ({post}: Props) => {\r\n   return (\r\n     <article>\r\n     <h2 className=\"text-2xl\">\r\n-      <Linkk href={post.url}>{post.title}</Link>\r\n+      <Link href={post.url}>{post.title}</Link>\r\n     </h2>\r\n     <time>\r\n       {new Date(post.date).toLocaleDateString(\"es-Es\", {\r\n         year: \"numeric\",\r\n"
+                },
+                {
+                    "date": 1697032072810,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,26 +1,30 @@\n-import { Post } from 'contentlayer/generated';\r\n-import Link from 'next/link';\r\n-import React from 'react'\r\n+import { Post } from \"contentlayer/generated\";\r\n+import Link from \"next/link\";\r\n+import React from \"react\";\r\n \r\n interface Props {\r\n-    post: Post;\r\n-  }\r\n+  post: Post;\r\n+}\r\n \r\n-const PostItem = ({post}: Props) => {\r\n+const PostItem = ({ post }: Props) => {\r\n   return (\r\n-    <article>\r\n-    <h2 className=\"text-2xl\">\r\n-      <Link href={post.url}>{post.title}</Link>\r\n-    </h2>\r\n-    <time>\r\n-      {new Date(post.date).toLocaleDateString(\"es-Es\", {\r\n-        year: \"numeric\",\r\n-        month: \"long\",\r\n-        day: \"numeric\",\r\n-      })}\r\n\\ No newline at end of file\n-    </time>\r\n-  </article>\r\n-  )\r\n-}\r\n+    <article class name {\r\n+        constructor(parameters) {\r\n+            \r\n+        }\r\n+    }>\r\n+      <h2 className=\"text-2xl\">\r\n+        <Link href={post.url}>{post.title}</Link>\r\n+      </h2>\r\n+      <time>\r\n+        {new Date(post.date).toLocaleDateString(\"es-Es\", {\r\n+          year: \"numeric\",\r\n+          month: \"long\",\r\n+          day: \"numeric\",\r\n+        })}\r\n+      </time>\r\n+    </article>\r\n+  );\r\n+};\r\n \r\n-export default PostItem\n+export default PostItem;\r\n"
+                },
+                {
+                    "date": 1697032081964,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,13 +7,9 @@\n }\r\n \r\n const PostItem = ({ post }: Props) => {\r\n   return (\r\n-    <article class name {\r\n-        constructor(parameters) {\r\n-            \r\n-        }\r\n-    }>\r\n+    <article className=\"shadow p-4 rounded-md\">\r\n       <h2 className=\"text-2xl\">\r\n         <Link href={post.url}>{post.title}</Link>\r\n       </h2>\r\n       <time>\r\n"
+                },
+                {
+                    "date": 1697032120502,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n }\r\n \r\n const PostItem = ({ post }: Props) => {\r\n   return (\r\n-    <article className=\"shadow p-4 rounded-md\">\r\n+    <article className=\"shadow-md p-4 rounded-md\">\r\n       <h2 className=\"text-2xl\">\r\n         <Link href={post.url}>{post.title}</Link>\r\n       </h2>\r\n       <time>\r\n"
+                },
+                {
+                    "date": 1697033538200,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n const PostItem = ({ post }: Props) => {\r\n   return (\r\n     <article className=\"shadow-md p-4 rounded-md\">\r\n       <h2 className=\"text-2xl\">\r\n-        <Link href={post.url}>{post.title}</Link>\r\n+        <Link href={post.url} className=\"block text-xl\">{post.title}</Link>\r\n       </h2>\r\n       <time>\r\n         {new Date(post.date).toLocaleDateString(\"es-Es\", {\r\n           year: \"numeric\",\r\n"
+                },
+                {
+                    "date": 1697033562092,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n     <article className=\"shadow-md p-4 rounded-md\">\r\n       <h2 className=\"text-2xl\">\r\n         <Link href={post.url} className=\"block text-xl\">{post.title}</Link>\r\n       </h2>\r\n-      <time>\r\n+      <time  className=\"text-sm text-slate-600\">\r\n         {new Date(post.date).toLocaleDateString(\"es-Es\", {\r\n           year: \"numeric\",\r\n           month: \"long\",\r\n           day: \"numeric\",\r\n"
+                },
+                {
+                    "date": 1697033593629,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n     <article className=\"shadow-md p-4 rounded-md\">\r\n       <h2 className=\"text-2xl\">\r\n         <Link href={post.url} className=\"block text-xl\">{post.title}</Link>\r\n       </h2>\r\n-      <time  className=\"text-sm text-slate-600\">\r\n+      <time  className=\"text-sm text-slate-600 text-center\">\r\n         {new Date(post.date).toLocaleDateString(\"es-Es\", {\r\n           year: \"numeric\",\r\n           month: \"long\",\r\n           day: \"numeric\",\r\n"
+                },
+                {
+                    "date": 1697033603920,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n     <article className=\"shadow-md p-4 rounded-md\">\r\n       <h2 className=\"text-2xl\">\r\n         <Link href={post.url} className=\"block text-xl\">{post.title}</Link>\r\n       </h2>\r\n-      <time  className=\"text-sm text-slate-600 text-center\">\r\n+      <time  className=\"text-sm text-slate-600 center\">\r\n         {new Date(post.date).toLocaleDateString(\"es-Es\", {\r\n           year: \"numeric\",\r\n           month: \"long\",\r\n           day: \"numeric\",\r\n"
+                },
+                {
+                    "date": 1697033629677,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n     <article className=\"shadow-md p-4 rounded-md\">\r\n       <h2 className=\"text-2xl\">\r\n         <Link href={post.url} className=\"block text-xl\">{post.title}</Link>\r\n       </h2>\r\n-      <time  className=\"text-sm text-slate-600 center\">\r\n+      <time  className=\" text-slate-600 center\">\r\n         {new Date(post.date).toLocaleDateString(\"es-Es\", {\r\n           year: \"numeric\",\r\n           month: \"long\",\r\n           day: \"numeric\",\r\n"
+                },
+                {
+                    "date": 1697033637860,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n     <article className=\"shadow-md p-4 rounded-md\">\r\n       <h2 className=\"text-2xl\">\r\n         <Link href={post.url} className=\"block text-xl\">{post.title}</Link>\r\n       </h2>\r\n-      <time  className=\"text-sm flex text-slate-600 center\">\r\n+      <time  className=\"text-sm flex text-slate-600 cente\">\r\n         {new Date(post.date).toLocaleDateString(\"es-Es\", {\r\n           year: \"numeric\",\r\n           month: \"long\",\r\n           day: \"numeric\",\r\n"
+                }
+            ],
+            "date": 1697031776686,
+            "name": "Commit-0",
+            "content": "import React from 'react'\r\n\r\nconst PostItem = () => {\r\n  return (\r\n    <div>PostItem</div>\r\n  )\r\n}\r\n\r\nexport default PostItem"
+        }
+    ]
+}
